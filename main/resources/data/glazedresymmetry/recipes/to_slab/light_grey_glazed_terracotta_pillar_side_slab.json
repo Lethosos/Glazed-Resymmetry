@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": {
+    "item": "glazedresymmetry:light_grey_glazed_terracotta_pillar_slab"
+  },
+  "result": {
+    "item": "glazedresymmetry:light_grey_glazed_terracotta_pillar_side_slab"
+  }
+}
