@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+	"minecraft:light_grey_glazed_terracotta",
+	"glazedresymmetry:light_grey_centered_glazed_terracotta",
+	"glazedresymmetry:light_grey_glazed_terracotta_pillar"
+  ]
+}

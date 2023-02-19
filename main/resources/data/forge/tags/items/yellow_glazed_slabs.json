@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+	"glazedresymmetry:yellow_glazed_terracotta_slab",
+	"glazedresymmetry:yellow_centered_glazed_terracotta_slab",
+	"glazedresymmetry:yellow_glazed_terracotta_pillar_slab",
+	"glazedresymmetry:yellow_glazed_terracotta_pillar_side_slab"
+  ]
+}
