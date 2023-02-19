@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "minecraft:block/cyan_glazed_terracotta",
+    "up": "minecraft:block/cyan_glazed_terracotta",
+    "down": "minecraft:block/cyan_glazed_terracotta",
+    "north": "glazedresymmetry:block/cyan_centered_glazed_terracotta",
+    "south": "glazedresymmetry:block/cyan_centered_glazed_terracotta",
+    "east": "glazedresymmetry:block/cyan_centered_glazed_terracotta",
+    "west": "glazedresymmetry:block/cyan_centered_glazed_terracotta"
+  }
+}
