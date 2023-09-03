@@ -34,8 +34,8 @@ import javax.annotation.Nonnull;
 		@Nonnull
 	    @Override
 	    protected @NotNull ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
-	    	LootTable extraTable = context.getLootTable(this.lootTable);
-			extraTable.getRandomItemsRaw(context, generatedLoot::add);
+	    	LootTable extraTable = context.getResolver().getLootTable(lootTable);
+			extraTable.getRandomItems(context, generatedLoot::add);
 	        return generatedLoot;
 	    }
 
