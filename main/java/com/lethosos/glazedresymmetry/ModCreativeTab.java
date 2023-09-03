@@ -27,17 +27,6 @@ public class ModCreativeTab extends CreativeModeTab {
 				.title(Component.translatable("itemGroup.glazedresymmetry"))
 				.withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
 				.icon(makeIcon())
-				.displayItems((itemDisplayParameters, output) -> {
-					int x = 0;
-					while ( ModItems.regItems.size() != x  )
-					{
-						output.accept(ModItems.regItems.get(x));
-						x++;
-					}
-				})
 				.build()
 			);
 }
-
-//.displayItems((itemDisplayParameters, output) -> {
-//output.accept(GItems.SILVER_UPGRADE_SMITHING_TEMPLATE.get());
