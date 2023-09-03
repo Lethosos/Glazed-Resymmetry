@@ -2,7 +2,6 @@ package com.lethosos.glazedresymmetry;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 
 public class ModCreativeTab extends CreativeModeTab {
     private ModCreativeTab(int index, String label) {
@@ -11,7 +10,7 @@ public class ModCreativeTab extends CreativeModeTab {
 
     @Override
     public ItemStack makeIcon() {
-        return new ItemStack(Items.LIGHT_BLUE_GLAZED_TERRACOTTA);
+        return new ItemStack(ModItems.LIGHT_BLUE_GLAZED_SHARD.get());
     }
     
     public static final ModCreativeTab instance = new ModCreativeTab(CreativeModeTab.TABS.length, "glazedresymmetry");
