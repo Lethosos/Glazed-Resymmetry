@@ -5,20 +5,19 @@ import java.util.function.Supplier;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-//import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.Blocks;
 //import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.GlazedTerracottaBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SlabBlock;
-//import net.minecraft.world.level.block.StairBlock;
-//import net.minecraft.world.level.block.WallBlock;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlocks {
 
     private static Block.Properties GlazedTerracottaProperties(String color) {
-        return Block.Properties.of(Material.STONE, GlazedColor.getColor(color)).requiresCorrectToolForDrops().strength(1.4F);
+        return BlockBehaviour.Properties.copy(Blocks.STONE).mapColor(GlazedColor.getColor(color)).requiresCorrectToolForDrops().strength(1.4F).pushReaction(PushReaction.PUSH_ONLY);
     }
     
     static void register() {
@@ -37,9 +36,12 @@ public class ModBlocks {
         //register("black_terracotta_pot", () -> new FlowerPotBlock(null, Blocks.AIR.delegate, GlazedTerracottaProperties(color)));
     }
 
-    private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
+	private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
         RegistryObject<T> reg_block = Registration.BLOCKS.register(name, block);
-        Registration.ITEMS.register(name, () -> new BlockItem(reg_block.get(), new Item.Properties().tab(ModCreativeTab.instance)));
+        Registration.ITEMS.register(name, () -> new BlockItem(reg_block.get(), new Item.Properties())); //.tab(ModCreativeTab.instance)));
+        ModCreativeTab.builder().displayItems((pParemeters, pOutput) -> {
+        	pOutput.accept(block.get());
+        });
         
         return reg_block;
     }
