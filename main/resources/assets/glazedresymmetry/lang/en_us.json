@@ -1,6 +1,23 @@
 {
   "itemGroup.glazedresymmetry": "Glazed ReSymmetry",
 
+  "item.glazedresymmetry.white_glazed_shard": "White Glazed Shard",
+  "item.glazedresymmetry.orange_glazed_shard": "Orange Glazed Shard",
+  "item.glazedresymmetry.magenta_glazed_shard": "Magenta Glazed Shard",
+  "item.glazedresymmetry.light_blue_glazed_shard": "Light Blue Glazed Shard",
+  "item.glazedresymmetry.yellow_glazed_shard": "Yellow Glazed Shard",
+  "item.glazedresymmetry.lime_glazed_shard": "Lime Glazed Shard",
+  "item.glazedresymmetry.pink_glazed_shard": "Pink Glazed Shard",
+  "item.glazedresymmetry.light_gray_glazed_shard": "Light Gray Glazed Shard",
+  "item.glazedresymmetry.gray_glazed_shard": "Gray Glazed Shard",
+  "item.glazedresymmetry.cyan_glazed_shard": "Cyan Glazed Shard",
+  "item.glazedresymmetry.purple_glazed_shard": "Purple Glazed Shard",
+  "item.glazedresymmetry.blue_glazed_shard": "Blue Glazed Shard",
+  "item.glazedresymmetry.brown_glazed_shard": "Brown Glazed Shard",
+  "item.glazedresymmetry.green_glazed_shard": "Green Glazed Shard",
+  "item.glazedresymmetry.red_glazed_shard": "Red Glazed Shard",
+  "item.glazedresymmetry.black_glazed_shard": "Black Glazed Shard",
+
   "block.glazedresymmetry.white_centered_glazed_terracotta": "White Centered Glazed Terracotta",
   "block.glazedresymmetry.orange_centered_glazed_terracotta": "Orange Centered Glazed Terracotta",
   "block.glazedresymmetry.magenta_centered_glazed_terracotta": "Magenta Centered Glazed Terracotta",
