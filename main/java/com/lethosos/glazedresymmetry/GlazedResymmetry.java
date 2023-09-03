@@ -12,4 +12,18 @@ public class GlazedResymmetry {
 
         MinecraftForge.EVENT_BUS.register(this);
     }
+
+    public static final ResourceKey<CreativeModeTab> TAB_KEY = ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(MOD_ID, "base"));
+    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = MOD_ID)
+    public class EventHandler
+    {
+        @SubscribeEvent
+        public static void buildContents(BuildCreativeModeTabContentsEvent event) {
+            if (event.getTabKey().equals(TAB_KEY)) {
+                for (RegistryObject<Item> item: Registration.ITEMS.getEntries()) {
+                    event.accept(item);
+                }
+            }
+        }
+    }
 }
