@@ -9,6 +9,22 @@
           "name": "glazedresymmetry:pink_centered_glazed_terracotta_slab"
         }
       ],
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": 1,
+          "add": true,
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "glazedresymmetry:pink_centered_glazed_terracotta_slab",
+              "properties": {
+                "type": "double"
+              }
+            }
+          ]
+        }
+      ],
       "conditions": [
         {
           "condition": "minecraft:survives_explosion"
@@ -16,4 +32,4 @@
       ]
     }
   ]
-}
+}}

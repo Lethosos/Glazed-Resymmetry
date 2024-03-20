@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "glazedresymmetry:pink_glazed_terracotta_slab"
+          "name": "glazedresymmetry:purple_centered_glazed_terracotta_slab"
         }
       ],
       "functions": [
@@ -17,7 +17,7 @@
           "conditions": [
             {
               "condition": "minecraft:block_state_property",
-              "block": "glazedresymmetry:pink_glazed_terracotta_slab",
+              "block": "glazedresymmetry:purple_centered_glazed_terracotta_slab",
               "properties": {
                 "type": "double"
               }
@@ -32,4 +32,4 @@
       ]
     }
   ]
-}
+}}

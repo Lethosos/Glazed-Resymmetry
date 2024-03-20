@@ -1,4 +1,10 @@
 {
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "clayworks"
+    }
+  ],
   "type": "minecraft:block",
   "pools": [
     {
@@ -6,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "glazedresymmetry:pink_glazed_terracotta_slab"
+          "name": "glazedresymmetry:glazed_terracotta_slab"
         }
       ],
       "functions": [
@@ -17,7 +23,7 @@
           "conditions": [
             {
               "condition": "minecraft:block_state_property",
-              "block": "glazedresymmetry:pink_glazed_terracotta_slab",
+              "block": "glazedresymmetry:glazed_terracotta_slab",
               "properties": {
                 "type": "double"
               }

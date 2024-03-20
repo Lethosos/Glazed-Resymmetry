@@ -9,6 +9,22 @@
           "name": "glazedresymmetry:red_glazed_terracotta_pillar_side_slab"
         }
       ],
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": 1,
+          "add": true,
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "glazedresymmetry:red_glazed_terracotta_pillar_side_slab",
+              "properties": {
+                "type": "double"
+              }
+            }
+          ]
+        }
+      ],
       "conditions": [
         {
           "condition": "minecraft:survives_explosion"
