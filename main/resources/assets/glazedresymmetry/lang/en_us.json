@@ -17,6 +17,7 @@
   "item.glazedresymmetry.green_glazed_shard": "Green Glazed Shard",
   "item.glazedresymmetry.red_glazed_shard": "Red Glazed Shard",
   "item.glazedresymmetry.black_glazed_shard": "Black Glazed Shard",
+  "item.glazedresymmetry.glazed_shard": "Glazed Shard",
 
   "block.glazedresymmetry.white_centered_glazed_terracotta": "White Centered Glazed Terracotta",
   "block.glazedresymmetry.orange_centered_glazed_terracotta": "Orange Centered Glazed Terracotta",
@@ -34,6 +35,7 @@
   "block.glazedresymmetry.green_centered_glazed_terracotta": "Green Centered Glazed Terracotta",
   "block.glazedresymmetry.red_centered_glazed_terracotta": "Red Centered Glazed Terracotta",
   "block.glazedresymmetry.black_centered_glazed_terracotta": "Black Centered Glazed Terracotta",
+  "block.glazedresymmetry.centered_glazed_terracotta": "Centered Glazed Terracotta",
 
   "block.glazedresymmetry.white_glazed_terracotta_pillar": "White Glazed Terracotta Pillar",
   "block.glazedresymmetry.orange_glazed_terracotta_pillar": "Orange Glazed Terracotta Pillar",
@@ -51,6 +53,7 @@
   "block.glazedresymmetry.green_glazed_terracotta_pillar": "Green Glazed Terracotta Pillar",
   "block.glazedresymmetry.red_glazed_terracotta_pillar": "Red Glazed Terracotta Pillar",
   "block.glazedresymmetry.black_glazed_terracotta_pillar": "Black Glazed Terracotta Pillar",
+  "block.glazedresymmetry.glazed_terracotta_pillar": "Glazed Terracotta Pillar",
 
   "block.glazedresymmetry.white_glazed_terracotta_slab": "White Glazed Terracotta Slab",
   "block.glazedresymmetry.orange_glazed_terracotta_slab": "Orange Glazed Terracotta Slab",
@@ -68,6 +71,7 @@
   "block.glazedresymmetry.green_glazed_terracotta_slab": "Green Glazed Terracotta Slab",
   "block.glazedresymmetry.red_glazed_terracotta_slab": "Red Glazed Terracotta Slab",
   "block.glazedresymmetry.black_glazed_terracotta_slab": "Black Glazed Terracotta Slab",
+  "block.glazedresymmetry.glazed_terracotta_slab": "Glazed Terracotta Slab",
 
   "block.glazedresymmetry.white_glazed_terracotta_pillar_slab": "White Glazed Terracotta Pillared Slab",
   "block.glazedresymmetry.orange_glazed_terracotta_pillar_slab": "Orange Glazed Terracotta Pillared Slab",
@@ -85,6 +89,7 @@
   "block.glazedresymmetry.green_glazed_terracotta_pillar_slab": "Green Glazed Terracotta Pillared Slab",
   "block.glazedresymmetry.red_glazed_terracotta_pillar_slab": "Red Glazed Terracotta Pillared Slab",
   "block.glazedresymmetry.black_glazed_terracotta_pillar_slab": "Black Glazed Terracotta Pillared Slab",
+  "block.glazedresymmetry.glazed_terracotta_pillar_slab": "Glazed Terracotta Pillared Slab",
 
   "block.glazedresymmetry.white_centered_glazed_terracotta_slab": "White Centered Glazed Terracotta Slab",
   "block.glazedresymmetry.orange_centered_glazed_terracotta_slab": "Orange Centered Glazed Terracotta Slab",
@@ -102,6 +107,7 @@
   "block.glazedresymmetry.green_centered_glazed_terracotta_slab": "Green Centered Glazed Terracotta Slab",
   "block.glazedresymmetry.red_centered_glazed_terracotta_slab": "Red Centered Glazed Terracotta Slab",
   "block.glazedresymmetry.black_centered_glazed_terracotta_slab": "Black Centered Glazed Terracotta Slab",
+  "block.glazedresymmetry.centered_glazed_terracotta_slab": "Centered Glazed Terracotta Slab",
 
   "block.glazedresymmetry.white_glazed_terracotta_pillar_side_slab": "White Glazed Terracotta Side Pillared Slab",
   "block.glazedresymmetry.orange_glazed_terracotta_pillar_side_slab": "Orange Glazed Terracotta Side Pillared Slab",
@@ -118,5 +124,6 @@
   "block.glazedresymmetry.brown_glazed_terracotta_pillar_side_slab": "Brown Glazed Terracotta Side Pillared Slab",
   "block.glazedresymmetry.green_glazed_terracotta_pillar_side_slab": "Green Glazed Terracotta Side Pillared Slab",
   "block.glazedresymmetry.red_glazed_terracotta_pillar_side_slab": "Red Glazed Terracotta Side Pillared Slab",
-  "block.glazedresymmetry.black_glazed_terracotta_pillar_side_slab": "Black Glazed Terracotta Side Pillared Slab"
+  "block.glazedresymmetry.black_glazed_terracotta_pillar_side_slab": "Black Glazed Terracotta Side Pillared Slab",
+  "block.glazedresymmetry.glazed_terracotta_pillar_side_slab": "Glazed Terracotta Side Pillared Slab"
 }

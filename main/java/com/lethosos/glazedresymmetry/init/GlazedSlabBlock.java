@@ -20,8 +20,8 @@ public class GlazedSlabBlock extends SlabBlock {
 	
 	public GlazedSlabBlock(Properties slab) {
 		super(slab);
-		//this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.SOUTH));
 	}
+
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockState) {
 		blockState.add(FACING, TYPE, WATERLOGGED);
 	}
@@ -29,7 +29,6 @@ public class GlazedSlabBlock extends SlabBlock {
 	public BlockState getStateForPlacement(BlockPlaceContext state) {
 	      BlockPos blockpos = state.getClickedPos();
 	      BlockState blockstate = state.getLevel().getBlockState(blockpos);
-	      //this.defaultBlockState().setValue(FACING, state.getHorizontalDirection().getOpposite());
 	      if (blockstate.is(this)) {
 	         return blockstate.setValue(TYPE, SlabType.DOUBLE).setValue(WATERLOGGED, Boolean.valueOf(false));
 	      } else {
