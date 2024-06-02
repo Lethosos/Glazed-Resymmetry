@@ -5,11 +5,11 @@ plugins {
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
 }
 
-version = '1.4'
-group = mod_group_id
+version = '1.6'
+group = 'com.lethosos.glazedresymmetry'
 
 base {
-    archivesName = mod_id
+    archivesName = 'glazedresymmetry'
 }
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
@@ -74,8 +74,11 @@ minecraft {
             // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
             property 'forge.logging.console.level', 'debug'
 
+            property "mixin.env.remapRefMap", "true"
+            property "mixin.env.refMapRemappingFile", "${projectDir}/build/createSrgToMcp/output.srg"
+
             mods {
-                "${mod_id}" {
+                "glazedresymmetry" {
                     source sourceSets.main
                 }
             }
@@ -120,6 +123,9 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
+    maven {
+        url = "https://maven.jaackson.me"
+    }
 }
 
 dependencies {
@@ -144,6 +150,8 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+
+    implementation fg.deobf("com.teamabnormals:blueprint:1.20.1-7.0.2")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
