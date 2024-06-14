@@ -146,7 +146,7 @@ public class ModBlocks {
 	public static RegistryObject<Block> GLAZED_TERRACOTTA_PILLAR_SIDE_SLAB = HELPER.createBlock("glazed_terracotta_pillar_side_slab", () -> new GlazedSlabBlock(GlazedTerracottaProperties(Blocks.TERRACOTTA.defaultMapColor().toString())));
 	public static RegistryObject<Block> CENTERED_GLAZED_TERRACOTTA_SLAB = HELPER.createBlock("centered_glazed_terracotta_slab", () -> new SlabBlock(GlazedTerracottaProperties(Blocks.TERRACOTTA.defaultMapColor().toString())));
 	
-    private static Block.Properties GlazedTerracottaProperties(String color) {
+	private static Block.Properties GlazedTerracottaProperties(String color) {
         return BlockBehaviour.Properties.copy(Blocks.STONE).mapColor(GlazedColor.getColor(color)).requiresCorrectToolForDrops().strength(1.4F).pushReaction(PushReaction.PUSH_ONLY);
     }
     
@@ -154,13 +154,14 @@ public class ModBlocks {
 		
 		//Yes, I'm aware there's hardly anything in here.
 		
+		//GlazedFlowerPot.buildPotables(modEventBus);
         GlazedResymmetry.LOGGER.log(Level.INFO, "ModBlocks: Blocks registered");
         //Clayworks compat
         if (ModList.get().isLoaded("clayworks")) {
         	GlazedResymmetry.LOGGER.log(Level.INFO, "ModBlocks: Clayworks Compat registered");
         }
         
-        Registration.BLOCKS.register(modEventBus);
+        //Registration.BLOCKS.register(modEventBus);
     }
 	
 	public static void setupTabEditors() {

@@ -1,5 +1,6 @@
 package com.lethosos.glazedresymmetry;
 
+import com.lethosos.glazedresymmetry.init.GlazedFlowerPot;
 import com.lethosos.glazedresymmetry.init.ModBlocks;
 import com.lethosos.glazedresymmetry.init.ModCreativeTab;
 import com.lethosos.glazedresymmetry.init.util.ModItemSubRegistryHelper;
@@ -29,6 +30,8 @@ public class Registration {
         REGISTRY_HELPER.register(modEventBus);
                 
         ModBlocks.register(modEventBus);
+        //GlazedFlowerPot.buildPotables();
+        //GlazedFlowerPot.registerFlowerPots();
         ModCreativeTab.register(modEventBus);
         
         BLOCKS.register(modEventBus);

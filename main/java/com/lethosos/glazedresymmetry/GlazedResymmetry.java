@@ -3,6 +3,7 @@ package com.lethosos.glazedresymmetry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.lethosos.glazedresymmetry.init.GlazedFlowerPot;
 import com.lethosos.glazedresymmetry.init.ModBlocks;
 import com.lethosos.glazedresymmetry.init.ModItems;
 import com.lethosos.glazedresymmetry.init.ModPotPatterns;
@@ -42,6 +43,7 @@ public class GlazedResymmetry {
 	private void commonSetup(FMLCommonSetupEvent event) {
     	event.enqueueWork(() -> {
     		ModPotPatterns.registerPatterns();
+    		GlazedFlowerPot.registerFlowerPots();
     	});
     }
 }
