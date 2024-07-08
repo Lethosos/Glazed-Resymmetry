@@ -68,6 +68,25 @@ public class ModItems{
 				YELLOW_GLAZED_SHARD,
 				BLACK_GLAZED_SHARD)
 		.predicate(event -> event.getTabKey() == ModCreativeTab.TAB_KEY.getKey() && ModList.get().isLoaded("clayworks"))
-		.addItems(GLAZED_SHARD);
+		.addItems(GLAZED_SHARD)
+		.tab(ModCreativeTab.TAB_KEY.getKey())
+		.addItems(GlazedFlowerPot.WHITE_GLAZED_FP,
+				GlazedFlowerPot.LIGHT_GRAY_GLAZED_FP,
+				GlazedFlowerPot.RED_GLAZED_FP,
+				GlazedFlowerPot.PURPLE_GLAZED_FP,
+				GlazedFlowerPot.PINK_GLAZED_FP,
+				GlazedFlowerPot.ORANGE_GLAZED_FP,
+				GlazedFlowerPot.MAGENTA_GLAZED_FP,
+				GlazedFlowerPot.LIME_GLAZED_FP,
+				GlazedFlowerPot.LIGHT_BLUE_GLAZED_FP,
+				GlazedFlowerPot.GREEN_GLAZED_FP,
+				GlazedFlowerPot.GRAY_GLAZED_FP,
+				GlazedFlowerPot.CYAN_GLAZED_FP,
+				GlazedFlowerPot.BROWN_GLAZED_FP,
+				GlazedFlowerPot.BLUE_GLAZED_FP,
+				GlazedFlowerPot.YELLOW_GLAZED_FP,
+				GlazedFlowerPot.BLACK_GLAZED_FP)
+		.predicate(event -> event.getTabKey() == ModCreativeTab.TAB_KEY.getKey() && ModList.get().isLoaded("clayworks"))
+		.addItems(GlazedFlowerPot.GLAZED_FP);
 	}
 }

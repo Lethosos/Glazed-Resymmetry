@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "glazedpots:block/black_glazed_potted_white_tulip"
+      "model": "glazedresymmetry:block/black_glazed_potted_white_tulip"
     }
   }
 }

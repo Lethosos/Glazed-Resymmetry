@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "glazedpots:block/white_glazed_flower_pot"
+      "model": "glazedresymmetry:block/white_glazed_flower_pot"
     }
   }
 }

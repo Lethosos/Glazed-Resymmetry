@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "glazedpots:block/green_glazed_potted_cornflower"
+      "model": "glazedresymmetry:block/green_glazed_potted_cornflower"
     }
   }
 }

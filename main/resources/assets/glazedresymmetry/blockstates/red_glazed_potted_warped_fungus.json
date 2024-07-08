@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "glazedpots:block/red_glazed_potted_warped_fungus"
+      "model": "glazedresymmetry:block/red_glazed_potted_warped_fungus"
     }
   }
 }

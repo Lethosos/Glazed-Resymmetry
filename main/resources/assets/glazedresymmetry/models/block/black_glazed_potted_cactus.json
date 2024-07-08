@@ -1,7 +1,8 @@
 {
   "parent": "minecraft:block/potted_cactus",
+  "render_type": "minecraft:cutout",
   "textures": {
-    "particle": "glazedpots:block/black_glazed_flower_pot",
-    "flowerpot": "glazedpots:block/black_glazed_flower_pot"
+    "particle": "glazedresymmetry:block/black_glazed_flower_pot",
+    "flowerpot": "glazedresymmetry:block/black_glazed_flower_pot"
   }
 }

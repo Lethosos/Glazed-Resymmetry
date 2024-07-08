@@ -3,11 +3,10 @@ package com.lethosos.glazedresymmetry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.lethosos.glazedresymmetry.init.GlazedFlowerPot;
 import com.lethosos.glazedresymmetry.init.ModBlocks;
+import com.lethosos.glazedresymmetry.init.GlazedFlowerPot;
 import com.lethosos.glazedresymmetry.init.ModItems;
 import com.lethosos.glazedresymmetry.init.ModPotPatterns;
-
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,10 +22,10 @@ public class GlazedResymmetry {
     // Directly reference a log4j logger.
     public static final Logger LOGGER = LogManager.getLogger();
     
+    public static final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    
     public GlazedResymmetry() {
-    	IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-    	
-        Registration.register();
+    	Registration.register();
         
         ModPotPatterns.PATTERNS.register(modEventBus);
 
@@ -43,7 +42,7 @@ public class GlazedResymmetry {
 	private void commonSetup(FMLCommonSetupEvent event) {
     	event.enqueueWork(() -> {
     		ModPotPatterns.registerPatterns();
-    		GlazedFlowerPot.registerFlowerPots();
+    		GlazedFlowerPot.registerFlowerPots(modEventBus);
     	});
     }
 }

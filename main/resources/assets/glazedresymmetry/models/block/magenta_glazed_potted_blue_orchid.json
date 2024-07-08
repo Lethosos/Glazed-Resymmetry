@@ -1,5 +1,5 @@
 {
-  "parent": "glazedpots:block/magenta_glazed_flower_pot_cross",
+  "parent": "glazedresymmetry:block/magenta_glazed_flower_pot_cross",
   "textures": {
     "plant": "minecraft:block/blue_orchid"
   }

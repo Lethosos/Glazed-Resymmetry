@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "glazedresymmetry:item/yellow_glazed_flower_pot"
+    }
+}

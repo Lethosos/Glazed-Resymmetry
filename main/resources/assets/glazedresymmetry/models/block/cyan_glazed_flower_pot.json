@@ -1,7 +1,7 @@
 {
   "parent" : "minecraft:block/flower_pot",
   "textures" : {
-    "particle" : "glazedpots:block/cyan_glazed_flower_pot",
-    "flowerpot" : "glazedpots:block/cyan_glazed_flower_pot"
+    "particle" : "glazedresymmetry:block/cyan_glazed_flower_pot",
+    "flowerpot" : "glazedresymmetry:block/cyan_glazed_flower_pot"
   }
 }

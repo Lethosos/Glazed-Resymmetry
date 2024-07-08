@@ -1,5 +1,5 @@
 {
-  "parent": "glazedpots:block/black_glazed_flower_pot_cross",
+  "parent": "glazedresymmetry:block/black_glazed_flower_pot_cross",
   "textures": {
     "plant": "minecraft:block/red_mushroom"
   }

@@ -1,5 +1,7 @@
 package com.lethosos.glazedresymmetry.init;
 
+import javax.annotation.Nullable;
+
 import org.apache.logging.log4j.Level;
 
 import com.lethosos.glazedresymmetry.GlazedResymmetry;
@@ -146,22 +148,39 @@ public class ModBlocks {
 	public static RegistryObject<Block> GLAZED_TERRACOTTA_PILLAR_SIDE_SLAB = HELPER.createBlock("glazed_terracotta_pillar_side_slab", () -> new GlazedSlabBlock(GlazedTerracottaProperties(Blocks.TERRACOTTA.defaultMapColor().toString())));
 	public static RegistryObject<Block> CENTERED_GLAZED_TERRACOTTA_SLAB = HELPER.createBlock("centered_glazed_terracotta_slab", () -> new SlabBlock(GlazedTerracottaProperties(Blocks.TERRACOTTA.defaultMapColor().toString())));
 	
-	private static Block.Properties GlazedTerracottaProperties(String color) {
+	public static Block.Properties GlazedTerracottaProperties(String color) {
         return BlockBehaviour.Properties.copy(Blocks.STONE).mapColor(GlazedColor.getColor(color)).requiresCorrectToolForDrops().strength(1.4F).pushReaction(PushReaction.PUSH_ONLY);
     }
+	
+	/**
+	 * Helper to register new glazed blocks via Blueprint helper function.
+	 * @param name The registry name assigned to the block.
+	 * @param type Defines the type of block available for registry. "cube", "pillar", "slab", and "rotate_slab". @Nullable defaults to "cube".
+	 * @param color Gives it a predefined color. Assigned to Properties.mapColor().
+	 */
+	public static RegistryObject<Block> newGlazedBlock(String name, @Nullable String type, String color) {
+		RegistryObject<Block> temp = null;
+		if (type == "slab") {
+			temp = HELPER.createBlock(name, () -> new SlabBlock(GlazedTerracottaProperties(color)));
+		}
+		else if (type == "pillar") {
+			temp = HELPER.createBlock(name, () -> new RotatedPillarBlock(GlazedTerracottaProperties(color)));
+		}
+		else if (type == "rotate_slab") {
+			temp = HELPER.createBlock(name, () -> new GlazedSlabBlock(GlazedTerracottaProperties(color)));
+		}
+		else if (type == "cube" || type == null) {
+			temp = HELPER.createBlock(name, () -> new GlazedTerracottaBlock(GlazedTerracottaProperties(color)));
+		}
+		return temp;
+	}
     
-	public static void register(IEventBus modEventBus) {
+	public static void register(IEventBus event) {
 		
-		//Yes, I'm aware there's hardly anything in here.
-		
-		//GlazedFlowerPot.buildPotables(modEventBus);
-        GlazedResymmetry.LOGGER.log(Level.INFO, "ModBlocks: Blocks registered");
         //Clayworks compat
         if (ModList.get().isLoaded("clayworks")) {
-        	GlazedResymmetry.LOGGER.log(Level.INFO, "ModBlocks: Clayworks Compat registered");
+        	GlazedResymmetry.LOGGER.log(Level.INFO, "ModBlocks: Clayworks glazed blocks registered");
         }
-        
-        //Registration.BLOCKS.register(modEventBus);
     }
 	
 	public static void setupTabEditors() {

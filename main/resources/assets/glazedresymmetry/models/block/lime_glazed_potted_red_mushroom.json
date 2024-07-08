@@ -1,5 +1,5 @@
 {
-  "parent": "glazedpots:block/lime_glazed_flower_pot_cross",
+  "parent": "glazedresymmetry:block/lime_glazed_flower_pot_cross",
   "textures": {
     "plant": "minecraft:block/red_mushroom"
   }

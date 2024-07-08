@@ -1,0 +1,6 @@
+{
+  "parent": "glazedresymmetry:block/light_blue_glazed_flower_pot_cross",
+  "textures": {
+    "plant": "minecraft:block/mangrove_propagule"
+  }
+}

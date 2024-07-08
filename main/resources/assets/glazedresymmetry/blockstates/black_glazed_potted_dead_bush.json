@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "glazedpots:block/black_glazed_potted_dead_bush"
+      "model": "glazedresymmetry:block/black_glazed_potted_dead_bush"
     }
   }
 }

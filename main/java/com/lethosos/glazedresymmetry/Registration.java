@@ -30,8 +30,7 @@ public class Registration {
         REGISTRY_HELPER.register(modEventBus);
                 
         ModBlocks.register(modEventBus);
-        //GlazedFlowerPot.buildPotables();
-        //GlazedFlowerPot.registerFlowerPots();
+        GlazedFlowerPot.registerPottedPlants(modEventBus);
         ModCreativeTab.register(modEventBus);
         
         BLOCKS.register(modEventBus);

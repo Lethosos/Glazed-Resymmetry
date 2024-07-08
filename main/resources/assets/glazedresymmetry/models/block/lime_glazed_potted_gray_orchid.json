@@ -1,0 +1,6 @@
+{
+  "parent": "glazedresymmetry:block/lime_glazed_flower_pot_cross",
+  "textures": {
+    "plant": "minecraft:block/lime_orchid"
+  }
+}

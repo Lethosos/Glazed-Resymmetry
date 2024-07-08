@@ -14,7 +14,7 @@ public class GlazedFlowerPotBlock extends FlowerPotBlock {
 
     protected static final VoxelShape SHAPE = Block.box(5.0D, 0.0D, 5.0D, 11.0D, 6.0D, 11.0D);
 
-    @SuppressWarnings("deprecation")
+    @SuppressWarnings({ "deprecation" })
 	public GlazedFlowerPotBlock(@Nullable Supplier<FlowerPotBlock> emptyPot, Block block) {
         super(emptyPot, () -> block, BlockBehaviour.Properties.copy(emptyPot.get()));
 

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "glazedpots:block/light_gray_glazed_potted_oxeye_daisy"
+      "model": "glazedresymmetry:block/light_gray_glazed_potted_oxeye_daisy"
     }
   }
 }
