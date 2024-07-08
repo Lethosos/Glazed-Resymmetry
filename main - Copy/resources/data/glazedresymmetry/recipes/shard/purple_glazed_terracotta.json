@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "gr_shard",
+	"ingredients": [{
+			"item": "glazedresymmetry:purple_glazed_shard"
+		},
+		{
+			"item": "glazedresymmetry:purple_glazed_shard"
+		},
+		{
+			"item": "glazedresymmetry:purple_glazed_shard"
+		},
+		{
+			"item": "glazedresymmetry:purple_glazed_shard"
+		}
+	],
+	"result": {
+		"item": "minecraft:purple_glazed_terracotta"
+	}
+}

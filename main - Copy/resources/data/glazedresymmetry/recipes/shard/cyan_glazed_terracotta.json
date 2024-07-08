@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "gr_shard",
+	"ingredients": [{
+			"item": "glazedresymmetry:cyan_glazed_shard"
+		},
+		{
+			"item": "glazedresymmetry:cyan_glazed_shard"
+		},
+		{
+			"item": "glazedresymmetry:cyan_glazed_shard"
+		},
+		{
+			"item": "glazedresymmetry:cyan_glazed_shard"
+		}
+	],
+	"result": {
+		"item": "minecraft:cyan_glazed_terracotta"
+	}
+}

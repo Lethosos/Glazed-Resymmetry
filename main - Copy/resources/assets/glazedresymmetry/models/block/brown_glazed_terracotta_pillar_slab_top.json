@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab_top",
+    "textures": {
+        "bottom": "glazedresymmetry:block/brown_glazed_terracotta_pillar_top",
+        "top": "glazedresymmetry:block/brown_glazed_terracotta_pillar_top",
+        "side": "glazedresymmetry:block/brown_glazed_terracotta_pillar"
+    }
+}

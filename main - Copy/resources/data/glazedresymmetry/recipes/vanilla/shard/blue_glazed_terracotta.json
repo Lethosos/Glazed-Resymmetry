@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "gr_shard",
+	"pattern": [
+		"##",
+		"##"
+	],
+	"key": {
+		"#": {
+			"item": "glazedresymmetry:blue_glazed_shard"
+		}
+	},
+	"result": {
+		"item": "minecraft:blue_glazed_terracotta"
+	}
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "glazedresymmetry:block/black_glazed_terracotta_pillar_top",
+    "up": "glazedresymmetry:block/black_glazed_terracotta_pillar_top",
+    "down": "glazedresymmetry:block/black_glazed_terracotta_pillar_top",
+    "north": "glazedresymmetry:block/black_glazed_terracotta_pillar",
+    "south": "glazedresymmetry:block/black_glazed_terracotta_pillar",
+    "east": "glazedresymmetry:block/black_glazed_terracotta_pillar",
+    "west": "glazedresymmetry:block/black_glazed_terracotta_pillar"
+  }
+}

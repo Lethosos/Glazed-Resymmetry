@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "glazedresymmetry:cyan_glazed_terracotta_pillar_slab"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": 1,
+          "add": true,
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "glazedresymmetry:cyan_glazed_terracotta_pillar_slab",
+              "properties": {
+                "type": "double"
+              }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}
