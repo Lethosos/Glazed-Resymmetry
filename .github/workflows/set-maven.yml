@@ -1,0 +1,9 @@
+- name: maven-settings-action
+  uses: s4u/maven-settings-action@v2.6.0
+  with:
+    servers: |
+      [{
+        "id": "reposilite-repository",
+        "username": "${{ secrets.MAVEN_NAME }}",
+        "password": "${{ secrets.MAVEN_SECRET }}"
+      }]
