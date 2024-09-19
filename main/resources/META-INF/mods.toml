@@ -73,7 +73,7 @@ Based on https://imgur.com/gallery/INH2a and https://feedback.minecraft.net/hc/e
 [[dependencies.glazedresymmetry]]
     modId = "blueprint"
     mandatory = true
-    versionRange = "[7.0.2,)"
+    versionRange = "[7.1.0,)"
     ordering = "BEFORE"
     side = "BOTH"
 

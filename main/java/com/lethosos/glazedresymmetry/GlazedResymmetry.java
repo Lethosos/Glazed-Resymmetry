@@ -3,9 +3,9 @@ package com.lethosos.glazedresymmetry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.lethosos.glazedresymmetry.init.ModBlocks;
-import com.lethosos.glazedresymmetry.init.ModItems;
-import com.lethosos.glazedresymmetry.init.ModPotPatterns;
+import com.lethosos.glazedresymmetry.init.GlazedBlocks;
+import com.lethosos.glazedresymmetry.init.GlazedItems;
+import com.lethosos.glazedresymmetry.init.GlazedPotPatterns;
 
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -22,26 +22,26 @@ public class GlazedResymmetry {
     // Directly reference a log4j logger.
     public static final Logger LOGGER = LogManager.getLogger();
     
+    public static final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    
     public GlazedResymmetry() {
-    	IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-    	
-        Registration.register();
+    	Registration.register();
         
-        ModPotPatterns.PATTERNS.register(modEventBus);
+        GlazedPotPatterns.PATTERNS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
         
         modEventBus.addListener(this::commonSetup);
         
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
-			ModBlocks.setupTabEditors();
-			ModItems.setupTabEditors();
+			GlazedBlocks.setupTabEditors();
+			GlazedItems.setupTabEditors();
         });
     }
     
 	private void commonSetup(FMLCommonSetupEvent event) {
     	event.enqueueWork(() -> {
-    		ModPotPatterns.registerPatterns();
+    		GlazedPotPatterns.registerPatterns();
     	});
     }
 }

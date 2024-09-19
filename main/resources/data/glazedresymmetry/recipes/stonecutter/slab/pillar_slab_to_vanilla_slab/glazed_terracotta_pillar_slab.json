@@ -1,0 +1,14 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "clayworks"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "glazedresymmetry:glazed_terracotta_pillar_slab"
+  },
+  "result": "glazedresymmetry:glazed_terracotta_slab",
+  "count": 1
+}
