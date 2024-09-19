@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "clayworks"
+    }
+  ],
+	"type": "minecraft:crafting_shaped",
+	"group": "gr_shard",
+	"pattern": [
+		"##",
+		"##"
+	],
+	"key": {
+		"#": {
+			"item": "glazedresymmetry:glazed_shard"
+		}
+	},
+	"result": {
+		"item": "clayworks:glazed_terracotta"
+	}
+}

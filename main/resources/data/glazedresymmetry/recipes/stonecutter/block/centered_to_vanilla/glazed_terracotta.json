@@ -1,0 +1,14 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "clayworks"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+      "item": "glazedresymmetry:black_centered_glazed_terracotta"
+  },
+  "result": "minecraft:black_glazed_terracotta",
+  "count": 1
+}

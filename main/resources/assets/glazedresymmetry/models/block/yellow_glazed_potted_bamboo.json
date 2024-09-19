@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/potted_bamboo",
-  "textures": {
-    "particle": "glazedresymmetry:block/yellow_glazed_flower_pot",
-    "flowerpot": "glazedresymmetry:block/yellow_glazed_flower_pot"
-  }
-}

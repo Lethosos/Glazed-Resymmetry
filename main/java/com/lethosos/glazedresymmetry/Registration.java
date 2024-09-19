@@ -1,8 +1,8 @@
 package com.lethosos.glazedresymmetry;
 
-import com.lethosos.glazedresymmetry.init.GlazedFlowerPot;
-import com.lethosos.glazedresymmetry.init.ModBlocks;
-import com.lethosos.glazedresymmetry.init.ModCreativeTab;
+import com.lethosos.glazedresymmetry.init.GlazedBlocks;
+import com.lethosos.glazedresymmetry.init.GlazedCreativeTab;
+import com.lethosos.glazedresymmetry.init.GlazedItems;
 import com.lethosos.glazedresymmetry.init.util.ModItemSubRegistryHelper;
 import com.teamabnormals.blueprint.core.util.registry.RegistryHelper;
 
@@ -29,9 +29,9 @@ public class Registration {
         
         REGISTRY_HELPER.register(modEventBus);
                 
-        ModBlocks.register(modEventBus);
-        GlazedFlowerPot.registerPottedPlants(modEventBus);
-        ModCreativeTab.register(modEventBus);
+        GlazedBlocks.register();
+        GlazedItems.register();
+        GlazedCreativeTab.register(modEventBus);
         
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);

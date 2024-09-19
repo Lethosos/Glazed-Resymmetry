@@ -1,6 +1,0 @@
-{
-  "parent": "glazedresymmetry:block/purple_glazed_flower_pot_cross",
-  "textures": {
-    "plant": "minecraft:block/acacia_sapling"
-  }
-}

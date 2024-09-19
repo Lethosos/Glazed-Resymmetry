@@ -17,8 +17,11 @@
         "glazedresymmetry:red_centered_glazed_terracotta",
         "glazedresymmetry:white_centered_glazed_terracotta",
         "glazedresymmetry:yellow_centered_glazed_terracotta",
-        "glazedresymmetry:centered_glazed_terracotta",
-
+        {
+        	"id": "glazedresymmetry:centered_glazed_terracotta",
+        	"required": false
+        },
+        
         "glazedresymmetry:black_glazed_terracotta_pillar",
         "glazedresymmetry:blue_glazed_terracotta_pillar",
         "glazedresymmetry:brown_glazed_terracotta_pillar",
@@ -35,8 +38,11 @@
         "glazedresymmetry:red_glazed_terracotta_pillar",
         "glazedresymmetry:white_glazed_terracotta_pillar",
         "glazedresymmetry:yellow_glazed_terracotta_pillar",
-        "glazedresymmetry:glazed_terracotta_pillar",
-
+        {
+        	"id": "glazedresymmetry:glazed_terracotta_pillar",
+        	"required": false
+        },
+        
         "glazedresymmetry:black_glazed_terracotta_slab",
         "glazedresymmetry:blue_glazed_terracotta_slab",
         "glazedresymmetry:brown_glazed_terracotta_slab",
@@ -53,7 +59,10 @@
         "glazedresymmetry:red_glazed_terracotta_slab",
         "glazedresymmetry:white_glazed_terracotta_slab",
         "glazedresymmetry:yellow_glazed_terracotta_slab",
-        "glazedresymmetry:glazed_terracotta_slab",
+        {
+        	"id": "glazedresymmetry:glazed_terracotta_slab",
+        	"required": false
+        },
 
         "glazedresymmetry:black_centered_glazed_terracotta_slab",
         "glazedresymmetry:blue_centered_glazed_terracotta_slab",
@@ -71,8 +80,11 @@
         "glazedresymmetry:red_centered_glazed_terracotta_slab",
         "glazedresymmetry:white_centered_glazed_terracotta_slab",
         "glazedresymmetry:yellow_centered_glazed_terracotta_slab",
-        "glazedresymmetry:centered_glazed_terracotta_slab",
-
+        {
+        	"id": "glazedresymmetry:centered_glazed_terracotta_slab",
+        	"required": false
+        },
+        
         "glazedresymmetry:black_glazed_terracotta_pillar_slab",
         "glazedresymmetry:blue_glazed_terracotta_pillar_slab",
         "glazedresymmetry:brown_glazed_terracotta_pillar_slab",
@@ -89,8 +101,11 @@
         "glazedresymmetry:red_glazed_terracotta_pillar_slab",
         "glazedresymmetry:white_glazed_terracotta_pillar_slab",
         "glazedresymmetry:yellow_glazed_terracotta_pillar_slab",
-        "glazedresymmetry:glazed_terracotta_pillar_slab",
-
+        {
+        	"id": "glazedresymmetry:glazed_terracotta_pillar_slab",
+        	"required": false
+        },
+        
         "glazedresymmetry:black_glazed_terracotta_pillar_side_slab",
         "glazedresymmetry:blue_glazed_terracotta_pillar_side_slab",
         "glazedresymmetry:brown_glazed_terracotta_pillar_side_slab",
@@ -107,6 +122,9 @@
         "glazedresymmetry:red_glazed_terracotta_pillar_side_slab",
         "glazedresymmetry:white_glazed_terracotta_pillar_side_slab",
         "glazedresymmetry:yellow_glazed_terracotta_pillar_side_slab",
-        "glazedresymmetry:glazed_terracotta_pillar_side_slab"
+        {
+        	"id": "glazedresymmetry:glazed_terracotta_pillar_side_slab",
+        	"required": false
+        }
     ]
 }

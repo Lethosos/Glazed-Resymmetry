@@ -1,7 +1,7 @@
 {
     "replace": false,
     "values": [
-	"glazedresymmetry:black_glazed_shard",
+		"glazedresymmetry:black_glazed_shard",
         "glazedresymmetry:blue_glazed_shard",
         "glazedresymmetry:brown_glazed_shard",
         "glazedresymmetry:cyan_glazed_shard",
@@ -17,6 +17,9 @@
         "glazedresymmetry:red_glazed_shard",
         "glazedresymmetry:white_glazed_shard",
         "glazedresymmetry:yellow_glazed_shard",
-	"glazedresymmetry:glazed_shard"
+        {
+        	"id": "glazedresymmetry:glazed_shard",
+        	"required": false
+        }
 	]
 }
