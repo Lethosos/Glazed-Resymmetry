@@ -5,10 +5,7 @@ import org.apache.logging.log4j.Level;
 import com.lethosos.glazedresymmetry.GlazedResymmetry;
 import com.lethosos.glazedresymmetry.Registration;
 import com.lethosos.glazedresymmetry.init.GlazedBlocks;
-import com.lethosos.glazedresymmetry.init.GlazedSlabBlock;
-import com.lethosos.glazedresymmetry.init.util.ModItemSubRegistryHelper;
-import com.teamabnormals.blueprint.core.util.item.CreativeModeTabContentsPopulator;
-import com.teamabnormals.blueprint.core.util.registry.BlockSubRegistryHelper;
+import com.lethosos.glazedresymmetry.init.util.GlazedSlabBlock;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -16,10 +13,9 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.GlazedTerracottaBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SlabBlock;
-import net.minecraftforge.fml.ModList;
-import net.minecraftforge.registries.RegistryObject;
 
 public class Clayworks {
+	/*
 	public static final BlockSubRegistryHelper HELPER = Registration.REGISTRY_HELPER.getBlockSubHelper();
 	public static final ModItemSubRegistryHelper IHELPER = Registration.REGISTRY_HELPER.getItemSubHelper();
 
@@ -60,4 +56,5 @@ public class Clayworks {
 					GLAZED_SHARD);
 		}
 	}
+	*/
 }

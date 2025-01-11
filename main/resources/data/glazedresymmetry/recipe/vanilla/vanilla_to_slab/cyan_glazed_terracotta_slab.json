@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "glazed_slab",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "id": "minecraft:cyan_glazed_terracotta"
+    }
+  },
+  "result": {
+    "id": "glazedresymmetry:cyan_glazed_terracotta_slab",
+    "count": 6
+  }
+}

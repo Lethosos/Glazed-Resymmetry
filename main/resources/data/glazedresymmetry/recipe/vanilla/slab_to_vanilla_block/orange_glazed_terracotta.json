@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "gr_glazed",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:orange_glazed_slabs"
+    }
+  },
+  "result": {
+    "id": "minecraft:orange_glazed_terracotta"
+  }
+}

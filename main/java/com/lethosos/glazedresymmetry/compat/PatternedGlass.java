@@ -4,20 +4,15 @@ import org.apache.logging.log4j.Level;
 
 import com.lethosos.glazedresymmetry.GlazedResymmetry;
 import com.lethosos.glazedresymmetry.Registration;
-import com.lethosos.glazedresymmetry.init.GlazedColor;
-import com.teamabnormals.blueprint.core.util.item.CreativeModeTabContentsPopulator;
-import com.teamabnormals.blueprint.core.util.registry.BlockSubRegistryHelper;
-
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StainedGlassPaneBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraftforge.fml.ModList;
-import net.minecraftforge.registries.RegistryObject;
 
 public class PatternedGlass {
+	/*
 	public static final BlockSubRegistryHelper HELPER = Registration.REGISTRY_HELPER.getBlockSubHelper();
 	
 	public static RegistryObject<Block> WHITE_CENTERED_GLAZED_GLASS;
@@ -144,6 +139,7 @@ public class PatternedGlass {
 	 * @param DyeColor color
 	 * @return BlockBehavior.Properties for glazed glass in general.
 	 */
+	/*
 	public static Block.Properties GlazedGlassProperties(DyeColor dye) {
         return BlockBehaviour.Properties.copy(Blocks.GLASS).mapColor(dye).strength(0.3F).noOcclusion().sound(SoundType.GLASS)
         		.isValidSpawn((state, getter, pos, entity) -> false).isRedstoneConductor((state, getter, pos) -> false)
@@ -404,4 +400,5 @@ public class PatternedGlass {
 						PINK_GLAZED_GLASS_PANE_SIDE_PILLAR);
 		}
 	}
+	*/
 }

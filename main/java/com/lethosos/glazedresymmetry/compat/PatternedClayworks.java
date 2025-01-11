@@ -1,18 +1,13 @@
 package com.lethosos.glazedresymmetry.compat;
 
 import com.lethosos.glazedresymmetry.Registration;
-import com.lethosos.glazedresymmetry.init.GlazedColor;
-import com.teamabnormals.blueprint.core.util.item.CreativeModeTabContentsPopulator;
-import com.teamabnormals.blueprint.core.util.registry.BlockSubRegistryHelper;
-
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.StainedGlassPaneBlock;
-import net.minecraftforge.fml.ModList;
-import net.minecraftforge.registries.RegistryObject;
 
 public class PatternedClayworks {
-public static final BlockSubRegistryHelper HELPER = Registration.REGISTRY_HELPER.getBlockSubHelper();
+	/*
+	public static final BlockSubRegistryHelper HELPER = Registration.REGISTRY_HELPER.getBlockSubHelper();
 	
 	public static RegistryObject<Block> GLAZED_GLASS;
 	public static RegistryObject<Block> CENTERED_GLAZED_GLASS;
@@ -50,4 +45,5 @@ public static final BlockSubRegistryHelper HELPER = Registration.REGISTRY_HELPER
 						GLAZED_GLASS_PANE_SIDE_PILLAR);
 		}
 	}
+	*/
 }
