@@ -1,0 +1,14 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "patternedglass"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+      "item": "patternedglass:orange_patterned_glass"
+  },
+  "result": "glazedresymmetry:orange_glazed_glass_pillar",
+  "count": 1
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y": { "model":  "glazedresymmetry:block/glass/pink_glazed_glass_pillar", "x":  0, "y":  0 },
+    "axis=z": { "model":  "glazedresymmetry:block/glass/pink_glazed_glass_pillar", "x":  90, "y":  0 },
+    "axis=x": { "model":  "glazedresymmetry:block/glass/pink_glazed_glass_pillar", "x":  90, "y":  90 }
+  }
+}

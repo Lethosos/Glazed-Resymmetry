@@ -1,0 +1,52 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_magenta_terracotta": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:magenta_terracotta"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:magenta_glazed_terracotta"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_magenta_terracotta",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "glazedresymmetry:vanilla/centered_to_slab/magenta_centered_glazed_terracotta_slab",
+      "glazedresymmetry:vanilla/pillar_to_slab/magenta_glazed_terracotta_pillar_slab",
+      "glazedresymmetry:vanilla/pillar_to_slab/magenta_glazed_terracotta_side_pillar_slab",
+      "glazedresymmetry:vanilla/shard/magenta_glazed_terracotta",
+      "glazedresymmetry:vanilla/slab_to_vanilla_block/magenta_glazed_terracotta",
+      "glazedresymmetry:vanilla/vanilla_to_slab/magenta_glazed_terracotta_slab",
+      "glazedresymmetry:stonecutter/block/magenta_glazed_terracotta",
+      "glazedresymmetry:stonecutter/block/magenta_centered_glazed_terracotta",
+      "glazedresymmetry:stonecutter/block/magenta_glazed_terracotta_pillar",
+      "glazedresymmetry:stonecutter/shard/magenta_glazed_shard",
+      "glazedresymmetry:stonecutter/slab/all_slab/magenta_glazed_terracotta_slab",
+      "glazedresymmetry:stonecutter/slab/centered_slab/magenta_centered_glazed_terracotta_slab",
+      "glazedresymmetry:stonecutter/slab/centered_slab/magenta_centered_glazed_terracotta_slab2",
+      "glazedresymmetry:stonecutter/slab/pillar_slab/magenta_glazed_terracotta_pillar_slab",
+      "glazedresymmetry:stonecutter/slab/pillar_slab/magenta_glazed_terracotta_pillar_slab2",
+      "glazedresymmetry:stonecutter/slab/side_pillar_slab/magenta_glazed_terracotta_side_pillar_slab",
+      "glazedresymmetry:stonecutter/slab/side_pillar_slab/magenta_glazed_terracotta_side_pillar_slab2",
+      "glazedresymmetry:stonecutter/slab/vanilla_slab/magenta_glazed_terracotta_slab"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,27 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "patternedglass"
+    }
+  ],
+    "type": "minecraft:crafting_shaped",
+    "group": "centered_glass",
+    "pattern": [
+      "###",
+      "#X#",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:glass"
+      },
+      "X": {
+        "item": "glazedresymmetry:light_blue_centered_glazed_terracotta"
+      }
+    },
+    "result": {
+      "item": "glazedresymmetry:light_blue_centered_glazed_glass",
+      "count": 8
+    }
+}

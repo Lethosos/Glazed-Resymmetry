@@ -1,0 +1,7 @@
+{
+  "render_type": "translucent",
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "glazedresymmetry:block/glass/pink_centered_glazed_glass"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "patternedglass"
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "clayworks"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "patterned_glass_pane_pillar_top",
+  "ingredients": [
+    {
+      "item": "glazedresymmetry:centered_glazed_glass_pane"
+    }
+  ],
+  "result": {
+    "item": "glazedresymmetry:glazed_glass_pane_pillar_top"
+  }
+}

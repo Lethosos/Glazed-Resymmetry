@@ -4,6 +4,7 @@ import org.apache.logging.log4j.Level;
 
 import com.lethosos.glazedresymmetry.GlazedResymmetry;
 import com.lethosos.glazedresymmetry.Registration;
+import com.lethosos.glazedresymmetry.compat.Clayworks;
 import com.mojang.datafixers.util.Pair;
 import com.teamabnormals.blueprint.core.util.DataUtil;
 
@@ -52,12 +53,12 @@ public class GlazedPotPatterns {
 		DataUtil.registerDecoratedPotPattern(Pair.of(GlazedItems.BLUE_GLAZED_SHARD.get(), BLUE));
 		DataUtil.registerDecoratedPotPattern(Pair.of(GlazedItems.YELLOW_GLAZED_SHARD.get(), YELLOW));
 		DataUtil.registerDecoratedPotPattern(Pair.of(GlazedItems.BLACK_GLAZED_SHARD.get(), BLACK));
-		GlazedResymmetry.LOGGER.log(Level.INFO, "ModPotPatterns: Patterns registered");
+		GlazedResymmetry.LOGGER.log(Level.INFO, "GlazedPotPatterns: Patterns registered");
 		
         //Clayworks compat
         if (ModList.get().isLoaded("clayworks")) {
-        	DataUtil.registerDecoratedPotPattern(Pair.of(GlazedItems.GLAZED_SHARD.get(), GLAZED));
-        	GlazedResymmetry.LOGGER.log(Level.INFO, "ModPotPatterns: Clayworks Compat registered");
+        	DataUtil.registerDecoratedPotPattern(Pair.of(Clayworks.GLAZED_SHARD.get(), GLAZED));
+        	GlazedResymmetry.LOGGER.log(Level.INFO, "GlazedPotPatterns: Clayworks Compat registered");
         }
 	}
 	

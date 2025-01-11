@@ -1,25 +1,20 @@
 {
-  "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "clayworks"
-    }
-  ],
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "glazedresymmetry:glazed_terracotta_pillar"
-        }
-      ],
+      "bonus_rolls": 0.0,
       "conditions": [
         {
           "condition": "minecraft:survives_explosion"
         }
-      ]
+      ],
+      "entries": [
+        {
+          "type": "glazedresymmetry:optional_loot_item",
+          "name": "glazedresymmetry:glazed_terracotta_pillar"
+        }
+      ],
+      "rolls": 1.0
     }
   ]
 }

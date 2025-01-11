@@ -1,0 +1,6 @@
+{
+  "parent": "glazedresymmetry:block/glass/template_glass_pane_noside_alt",
+  "textures": {
+    "pane": "glazedresymmetry:block/glass/brown_centered_glazed_glass"
+  }
+}

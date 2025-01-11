@@ -2,9 +2,7 @@ package com.lethosos.glazedresymmetry.init;
 
 import java.util.HashMap;
 import java.util.List;
-
 import com.lethosos.glazedresymmetry.Registration;
-
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:cyan_glazed_terracotta"
+    },
+    {
+      "item": "glazedresymmetry:cyan_centered_glazed_terracotta"
+    },
+    {
+      "item": "glazedresymmetry:cyan_glazed_terracotta_pillar"
+    }
+  ],
+  "result": "glazedresymmetry:cyan_glazed_shard",
+  "count": 4
+}

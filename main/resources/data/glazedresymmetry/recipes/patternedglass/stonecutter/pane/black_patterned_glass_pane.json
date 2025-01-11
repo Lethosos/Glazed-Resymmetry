@@ -1,0 +1,25 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "patternedglass"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "glazedresymmetry:black_centered_glazed_glass_pane"
+    },
+    {
+      "item": "glazedresymmetry:black_glazed_glass_pane_pillar"
+    },
+    {
+      "item": "glazedresymmetry:black_glazed_glass_pane_pillar_top"
+    },
+    {
+      "item": "glazedresymmetry:black_glazed_glass_pane_side_pillar"
+    }
+  ],
+  "result": "patternedglass:black_patterned_glass_pane",
+  "count": 1
+}

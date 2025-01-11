@@ -17,7 +17,7 @@ license="MIT"
 # The modid of the mod
 modId="glazedresymmetry" #mandatory
 # The version number of the mod
-version="1.6" #mandatory
+version="1.7" #mandatory
 # A display name for the mod
 displayName="Glazed ReSymmetry" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://docs.minecraftforge.net/en/latest/misc/updatechecker/
@@ -81,6 +81,13 @@ Based on https://imgur.com/gallery/INH2a and https://feedback.minecraft.net/hc/e
     modId="clayworks"
     mandatory=false
     versionRange="[3.0.0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.glazedresymmetry]]
+    modId="patternedglass"
+    mandatory=false
+    versionRange="[4.0.0,)"
     ordering="NONE"
     side="BOTH"
 

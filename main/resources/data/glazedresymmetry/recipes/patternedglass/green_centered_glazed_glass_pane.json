@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "patternedglass"
+    }
+  ],
+    "type": "minecraft:crafting_shaped",
+    "group": "centered_glass_pane",
+    "pattern": [
+      "###",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "glazedresymmetry:green_centered_glazed_glass"
+      }
+    },
+    "result": {
+      "item": "glazedresymmetry:green_centered_glazed_glass_pane",
+      "count": 8
+    }
+}

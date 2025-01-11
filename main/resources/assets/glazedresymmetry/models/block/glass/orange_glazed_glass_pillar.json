@@ -1,0 +1,13 @@
+{
+  "render_type": "translucent",
+  "parent": "block/cube",
+  "textures": {
+    "particle": "glazedresymmetry:block/glass/orange_glazed_glass_pillar_top",
+    "up": "glazedresymmetry:block/glass/orange_glazed_glass_pillar_top",
+    "down": "glazedresymmetry:block/glass/orange_glazed_glass_pillar_top",
+    "north": "glazedresymmetry:block/glass/orange_glazed_glass_pillar",
+    "south": "glazedresymmetry:block/glass/orange_glazed_glass_pillar",
+    "east": "glazedresymmetry:block/glass/orange_glazed_glass_pillar",
+    "west": "glazedresymmetry:block/glass/orange_glazed_glass_pillar"
+  }
+}

@@ -1,9 +1,21 @@
 {
   "replace": false,
   "values": [
-	"glazedresymmetry:glazed_terracotta_slab",
-	"glazedresymmetry:centered_glazed_terracotta_slab",
-	"glazedresymmetry:glazed_terracotta_pillar_slab",
-	"glazedresymmetry:glazed_terracotta_pillar_side_slab"
+        {
+        	"id": "glazedresymmetry:glazed_terracotta_slab",
+        	"required": false
+        },
+        {
+        	"id": "glazedresymmetry:centered_glazed_terracotta_slab",
+        	"required": false
+        },
+        {
+        	"id": "glazedresymmetry:glazed_terracotta_pillar_slab",
+        	"required": false
+        },
+        {
+        	"id": "glazedresymmetry:glazed_terracotta_side_pillar_slab",
+        	"required": false
+        }
   ]
 }

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "glazedresymmetry:block/light_blue_glazed_terracotta_pillar",
+    "up": "glazedresymmetry:block/light_blue_glazed_terracotta_pillar",
+    "down": "glazedresymmetry:block/light_blue_glazed_terracotta_pillar",
+    "north": "glazedresymmetry:block/light_blue_glazed_terracotta_side_pillar",
+    "south": "glazedresymmetry:block/light_blue_glazed_terracotta_side_pillar",
+    "east": "glazedresymmetry:block/light_blue_glazed_terracotta_side_pillar",
+    "west": "glazedresymmetry:block/light_blue_glazed_terracotta_side_pillar"
+  }
+}

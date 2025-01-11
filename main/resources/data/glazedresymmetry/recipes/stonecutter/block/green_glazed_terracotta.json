@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "glazedresymmetry:green_glazed_terracotta_pillar"
+    },
+    {
+      "item": "glazedresymmetry:green_centered_glazed_terracotta"
+    }
+  ],
+  "result": "minecraft:green_glazed_terracotta",
+  "count": 1
+}

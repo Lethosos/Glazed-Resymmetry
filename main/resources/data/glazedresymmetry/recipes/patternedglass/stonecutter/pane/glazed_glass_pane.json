@@ -1,0 +1,31 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "patternedglass"
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "clayworks"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "glazedresymmetry:centered_glazed_glass_pane"
+    },
+    {
+      "item": "glazedresymmetry:glazed_glass_pane_pillar"
+    },
+    {
+      "item": "glazedresymmetry:glazed_glass_pane_pillar_top"
+    },
+    {
+      "item": "glazedresymmetry:glazed_glass_pane_side_pillar"
+    }
+  ],
+  "result": "glazedresymmetry:glazed_glass_pane",
+  "count": 1
+}

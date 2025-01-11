@@ -1,0 +1,33 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "patternedglass"
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "clayworks"
+    }
+  ],
+    "type": "minecraft:crafting_shaped",
+    "group": "patterned_glass_pillar",
+    "pattern": [
+      "###",
+      "#X#",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:glass"
+      },
+      "X": {
+        "item": "glazedresymmetry:glazed_terracotta_pillar"
+      }
+    },
+    "result": {
+      "item": "glazedresymmetry:glazed_glass_pillar",
+      "count": 8
+    }
+}

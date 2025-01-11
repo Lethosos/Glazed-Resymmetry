@@ -1,0 +1,77 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "glazedresymmetry:block/glass/pink_glazed_glass_pane_pillar_side_post"
+      }
+    },
+    {
+      "apply": {
+        "model": "glazedresymmetry:block/glass/pink_glazed_glass_pane_pillar_side_side"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "glazedresymmetry:block/glass/pink_glazed_glass_pane_pillar_side_side",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "glazedresymmetry:block/glass/pink_glazed_glass_pane_pillar_side_side_alt"
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "glazedresymmetry:block/glass/pink_glazed_glass_pane_pillar_side_side_alt",
+        "y": 90
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "glazedresymmetry:block/glass/pink_glazed_glass_pane_pillar_side_noside"
+      },
+      "when": {
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "glazedresymmetry:block/glass/pink_glazed_glass_pane_pillar_side_noside_alt"
+      },
+      "when": {
+        "east": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "glazedresymmetry:block/glass/pink_glazed_glass_pane_pillar_side_noside_alt",
+        "y": 90
+      },
+      "when": {
+        "south": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "glazedresymmetry:block/glass/pink_glazed_glass_pane_pillar_side_noside",
+        "y": 270
+      },
+      "when": {
+        "west": "false"
+      }
+    }
+  ]
+}

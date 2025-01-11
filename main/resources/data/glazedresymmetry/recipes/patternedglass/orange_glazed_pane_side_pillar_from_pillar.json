@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "patternedglass"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "patterned_glass_pan_side_pillare",
+  "ingredients": [
+    {
+      "item": "glazedresymmetry:orange_glazed_glass_pane_pillar"
+    }
+  ],
+  "result": {
+    "item": "glazedresymmetry:orange_glazed_glass_pane_side_pillar"
+  }
+}

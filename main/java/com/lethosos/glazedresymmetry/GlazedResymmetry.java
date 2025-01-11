@@ -3,8 +3,10 @@ package com.lethosos.glazedresymmetry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.lethosos.glazedresymmetry.compat.Clayworks;
+import com.lethosos.glazedresymmetry.compat.PatternedClayworks;
+import com.lethosos.glazedresymmetry.compat.PatternedGlass;
 import com.lethosos.glazedresymmetry.init.GlazedBlocks;
-import com.lethosos.glazedresymmetry.init.GlazedItems;
 import com.lethosos.glazedresymmetry.init.GlazedPotPatterns;
 
 import net.minecraftforge.api.distmarker.Dist;
@@ -35,7 +37,9 @@ public class GlazedResymmetry {
         
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
 			GlazedBlocks.setupTabEditors();
-			GlazedItems.setupTabEditors();
+			Clayworks.setupTabEditors();
+			PatternedGlass.setupTabEditors();
+			PatternedClayworks.setupTabEditors();
         });
     }
     

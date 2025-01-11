@@ -1,9 +1,9 @@
 {
   "parent": "block/cube",
   "textures": {
-    "particle": "glazedresymmetry:block/glazed_terracotta",
-    "up": "glazedresymmetry:block/glazed_terracotta",
-    "down": "glazedresymmetry:block/glazed_terracotta",
+    "particle": "clayworks:block/glazed_terracotta",
+    "up": "clayworks:block/glazed_terracotta",
+    "down": "clayworks:block/glazed_terracotta",
     "north": "glazedresymmetry:block/centered_glazed_terracotta",
     "south": "glazedresymmetry:block/centered_glazed_terracotta",
     "east": "glazedresymmetry:block/centered_glazed_terracotta",

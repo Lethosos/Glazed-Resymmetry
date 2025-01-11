@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:recipes/root",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "patternedglass"
+    }
+  ],
+  "criteria": {
+    "has_green_glass": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:green_stained_glass"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "patternedglass:green_patterned_glass"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_green_glass",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "glazedresymmetry:patternedglass/green_centered_glazed_glass",
+      "glazedresymmetry:patternedglass/green_centered_glazed_glass_pane",
+      "glazedresymmetry:patternedglass/green_glazed_glass_pillar",
+      "glazedresymmetry:patternedglass/green_glazed_glass_pane_pillar",
+      "glazedresymmetry:patternedglass/green_glazed_pane_pillar_from_side_pillar",
+      "glazedresymmetry:patternedglass/green_glazed_pane_pillar_top_from_centered",
+      "glazedresymmetry:patternedglass/green_glazed_pane_side_pillar_from_pillar"
+    ]
+  },
+  "sends_telemetry_event": false
+}

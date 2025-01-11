@@ -1,5 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "centered_glazed_slab",
   "pattern": [
     "###"
   ],

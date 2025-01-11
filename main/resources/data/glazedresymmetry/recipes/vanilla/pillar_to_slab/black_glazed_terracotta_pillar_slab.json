@@ -1,5 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "glazed_pillar_slab",
   "key": {
     "#": {
       "item": "glazedresymmetry:black_glazed_terracotta_pillar"

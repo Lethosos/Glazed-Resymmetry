@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "glazedresymmetry:orange_glazed_terracotta_pillar"
+  },
+  "result": "glazedresymmetry:orange_glazed_terracotta_side_pillar_slab",
+  "count": 2
+}

@@ -1,0 +1,58 @@
+{
+  "parent": "minecraft:recipes/root",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "clayworks"
+    }
+  ],
+  "criteria": {
+    "has_terracotta": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:terracotta"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "clayworks:glazed_terracotta"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_terracotta",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "glazedresymmetry:clayworks/centered_glazed_terracotta_slab",
+      "glazedresymmetry:clayworks/glazed_terracotta_pillar_slab",
+      "glazedresymmetry:clayworks/glazed_terracotta_side_pillar_slab",
+      "glazedresymmetry:clayworks/shard/glazed_terracotta",
+      "glazedresymmetry:clayworks/glazed_terracotta",
+      "glazedresymmetry:clayworks/glazed_terracotta_slab",
+      "glazedresymmetry:stonecutter/block/glazed_terracotta",
+      "glazedresymmetry:stonecutter/block/centered_glazed_terracotta",
+      "glazedresymmetry:stonecutter/block/glazed_terracotta_pillar",
+      "glazedresymmetry:stonecutter/shard/glazed_shard",
+      "glazedresymmetry:stonecutter/slab/all_slab/glazed_terracotta_slab",
+      "glazedresymmetry:stonecutter/slab/centered_slab/centered_glazed_terracotta_slab",
+      "glazedresymmetry:stonecutter/slab/centered_slab/centered_glazed_terracotta_slab2",
+      "glazedresymmetry:stonecutter/slab/pillar_slab/glazed_terracotta_pillar_slab",
+      "glazedresymmetry:stonecutter/slab/pillar_slab/glazed_terracotta_pillar_slab2",
+      "glazedresymmetry:stonecutter/slab/side_pillar_slab/glazed_terracotta_side_pillar_slab",
+      "glazedresymmetry:stonecutter/slab/side_pillar_slab/glazed_terracotta_side_pillar_slab2",
+      "glazedresymmetry:stonecutter/slab/vanilla_slab/glazed_terracotta_slab"
+    ]
+  },
+  "sends_telemetry_event": false
+}

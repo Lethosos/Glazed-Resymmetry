@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "clayworks"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "gr_glazed",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:glazed_slabs"
+    }
+  },
+  "result": {
+    "item": "clayworks:glazed_terracotta"
+  }
+}

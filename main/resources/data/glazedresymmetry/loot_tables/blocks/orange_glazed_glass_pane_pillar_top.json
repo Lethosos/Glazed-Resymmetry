@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "entries": [
+                {
+                   "type": "glazedresymmetry:optional_loot_item",
+                   "name": "glazedresymmetry:orange_glazed_glass_pane_pillar_top"
+                }
+            ],
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "minecraft:match_tool",
+                    "predicate": {
+                        "enchantments": [
+                            {
+                                "enchantment": "minecraft:silk_touch",
+                                "levels": {
+                                    "min": 1
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
