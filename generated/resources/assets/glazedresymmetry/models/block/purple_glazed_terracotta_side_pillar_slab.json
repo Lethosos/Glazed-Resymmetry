@@ -1,0 +1,7 @@
+{
+  "parent": "glazedresymmetry:block/rotated_slab",
+  "textures": {
+    "side": "glazedresymmetry:block/purple_glazed_terracotta_pillar",
+    "top": "glazedresymmetry:block/purple_glazed_terracotta_pillar_top"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "glazedresymmetry:magenta_glazed_terracotta_side_pillar_slab"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "glazedresymmetry:magenta_glazed_terracotta_pillar_slab"
+  }
+}

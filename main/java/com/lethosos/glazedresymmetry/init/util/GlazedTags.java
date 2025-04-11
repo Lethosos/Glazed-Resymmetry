@@ -42,6 +42,12 @@ public class GlazedTags {
         public static final TagKey<Item> PURPLE_BLOCKS = createTag("purple_glazed_blocks");
         public static final TagKey<Item> PINK_SLABS = createTag("pink_glazed_slabs");
         public static final TagKey<Item> PINK_BLOCKS = createTag("pink_glazed_blocks");
+        
+        //Clayworks
+        public static final TagKey<Item> GLAZED_SLABS = createTag("glazed_slabs");
+        public static final TagKey<Item> GLAZED_BLOCKS = createTag("glazed_blocks");
+        
+        public static final TagKey<Item> ALL_SHARDS = createTag("glazed_shards");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(Registration.MOD_ID, name));

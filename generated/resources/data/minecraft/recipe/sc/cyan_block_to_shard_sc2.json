@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "glazedresymmetry:cyan_glazed_blocks"
+  },
+  "result": {
+    "count": 4,
+    "id": "glazedresymmetry:cyan_glazed_shard"
+  }
+}

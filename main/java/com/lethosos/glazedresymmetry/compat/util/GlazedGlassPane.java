@@ -4,8 +4,15 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StainedGlassPaneBlock;
 
+//Currently this is off because Patterned Glass is not updated yet 
+@SuppressWarnings("unused")
 public class GlazedGlassPane extends StainedGlassPaneBlock {
 
+	public GlazedGlassPane(DyeColor color, Properties properties) {
+		super(color, properties);
+		// TODO Auto-generated constructor stub
+	}
+	/*
 	private final DyeColor color;
 	
 	public GlazedGlassPane(Properties properties, DyeColor color) {
@@ -30,4 +37,5 @@ public class GlazedGlassPane extends StainedGlassPaneBlock {
     public DyeColor getColor() {
         return this.color;
     }
+    */
 }

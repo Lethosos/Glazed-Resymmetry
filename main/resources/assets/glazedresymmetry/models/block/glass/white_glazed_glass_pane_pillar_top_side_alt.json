@@ -1,7 +1,0 @@
-{
-  "parent": "glazedresymmetry:block/glass/template_glass_pane_side_alt",
-  "textures": {
-    "edge": "minecraft:block/white_stained_glass_pane_top",
-    "pane": "glazedresymmetry:block/glass/white_glazed_glass_pillar_top"
-  }
-}

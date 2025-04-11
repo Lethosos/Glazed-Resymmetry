@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "flowerpot": "glazedresymmetry:block/pink_glazed_flower_pot",
+    "particle": "glazedresymmetry:block/pink_glazed_flower_pot",
+    "plant": "minecraft:block/fern"
+  }
+}

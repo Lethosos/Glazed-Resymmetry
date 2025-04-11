@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "glazedresymmetry:block/black_glazed_terracotta_pillar_slab"
+    },
+    "type=double": {
+      "model": "glazedresymmetry:block/black_glazed_terracotta_pillar"
+    },
+    "type=top": {
+      "model": "glazedresymmetry:block/black_glazed_terracotta_pillar_slab_top"
+    }
+  }
+}

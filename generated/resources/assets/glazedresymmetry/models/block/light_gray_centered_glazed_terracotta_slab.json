@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "glazedresymmetry:block/light_gray_centered_glazed_terracotta",
+    "side": "glazedresymmetry:block/light_gray_centered_glazed_terracotta",
+    "top": "glazedresymmetry:block/light_gray_centered_glazed_terracotta"
+  }
+}

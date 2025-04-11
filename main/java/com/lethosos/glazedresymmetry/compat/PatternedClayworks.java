@@ -5,6 +5,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.StainedGlassPaneBlock;
 
+// Currently this is off because Patterned Glass is not updated yet 
+@SuppressWarnings("unused")
 public class PatternedClayworks {
 	/*
 	public static final BlockSubRegistryHelper HELPER = Registration.REGISTRY_HELPER.getBlockSubHelper();

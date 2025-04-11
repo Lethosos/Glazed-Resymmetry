@@ -1,7 +1,8 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '1.0.21'
+    id 'net.neoforged.moddev' version '2.0.76'
+    id 'idea'
 }
 
 tasks.named('wrapper', Wrapper).configure {
@@ -17,6 +18,8 @@ version = mod_version
 group = mod_group_id
 
 repositories {
+    mavenLocal()
+    // Adds the 'libs' folder in the project directory as a flat directory
     flatDir {
         dir 'libs'
     }
@@ -94,8 +97,7 @@ neoForge {
     mods {
         // define mod <-> source bindings
         // these are used to tell the game which sources are for which mod
-        // mostly optional in a single mod project
-        // but multi mod projects should define one per mod
+        // multi mod projects should define one per mod
         "${mod_id}" {
             sourceSet(sourceSets.main)
         }
@@ -135,9 +137,8 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-
-    //implementation fg.deobf("com.teamabnormals:blueprint:1.21.1-8.0.0")
-    //implementation 'com.teamabnormals:blueprint:1.21.1-8.0.0'
+    implementation "com.teamabnormals:clayworks-1.21.1:4.0.0"
+    implementation "com.teamabnormals:blueprint-1.21.1:8.0.2"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
@@ -168,18 +169,18 @@ sourceSets.main.resources.srcDir generateModMetadata
 neoForge.ideSyncTask generateModMetadata
 
 // Example configuration to allow publishing using the maven-publish plugin
-publishing {
-    publications {
-        register('mavenJava', MavenPublication) {
-            from components.java
-        }
-    }
-    repositories {
-        maven {
-            url "file://${project.projectDir}/repo"
-        }
-    }
-}
+//publishing {
+//    publications {
+//        register('mavenJava', MavenPublication) {
+//            from components.java
+//        }
+//    }
+//    repositories {
+//        maven {
+//            url "file://${project.projectDir}/repo"
+//        }
+//    }
+//}
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation

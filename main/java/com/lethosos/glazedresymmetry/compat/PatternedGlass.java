@@ -11,6 +11,8 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StainedGlassPaneBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
+//Currently this is off because Patterned Glass is not updated yet 
+@SuppressWarnings("unused")
 public class PatternedGlass {
 	/*
 	public static final BlockSubRegistryHelper HELPER = Registration.REGISTRY_HELPER.getBlockSubHelper();

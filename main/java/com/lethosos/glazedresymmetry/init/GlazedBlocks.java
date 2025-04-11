@@ -4,18 +4,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.lethosos.glazedresymmetry.Registration;
-import com.lethosos.glazedresymmetry.init.util.datagen.DataGenerators;
+import com.lethosos.glazedresymmetry.compat.Clayworks;
+import com.lethosos.glazedresymmetry.datagen.DataGenerators;
+import com.lethosos.glazedresymmetry.init.util.DataUtil;
 
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.entity.DecoratedPotPattern;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import com.mojang.datafixers.util.Pair;
 
 public class GlazedBlocks {
 	public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Registration.MOD_ID);
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Registration.MOD_ID);
-	
-	public static List<GlazedGroup> groupList = new ArrayList<GlazedGroup>();
+	public static final DeferredRegister<DecoratedPotPattern> PATTERNS = DeferredRegister.create(Registries.DECORATED_POT_PATTERN, Registration.MOD_ID);
+	public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, Registration.MOD_ID);
 
+	public static List<GlazedGroup> groupList = new ArrayList<GlazedGroup>();
+	public static List<Pair<Item, DeferredHolder<DecoratedPotPattern, ?>>> patternList = new ArrayList<Pair<Item, DeferredHolder<DecoratedPotPattern, ?>>>();
+	
 	//WHITE
 	public static GlazedGroup WHITE = new GlazedGroup("white", DyeColor.WHITE.getMapColor());
 	//LIGHT_GRAY
@@ -68,6 +80,8 @@ public class GlazedBlocks {
     	groupList.add(MAGENTA);
     	groupList.add(PINK);
     	
+    	Clayworks.register();
+    	
     	BLOCKS.register(eventBus);
     	ITEMS.register(eventBus);
     }
@@ -80,9 +94,25 @@ public class GlazedBlocks {
     	});
     }
     
+    public static void registerPatterns() {
+    	groupList.forEach((group) -> {
+    		DataUtil.registerDecoratedPotPattern(Pair.of(group.SHARD.get(), group.PATTERN));
+    	});
+    	
+    	Clayworks.registerPattern();
+    }
+    
     public static void populateList() {
     	groupList.forEach((group) -> {
-    		DataGenerators.groupList.add(group);
+    		DataGenerators.dataList.add(group);
     	});
+    }
+    
+    public static void registerPots() {
+    	groupList.forEach((group) -> {
+    		group.registerPots();
+    	});
+    	
+    	Clayworks.registerPots();
     }
 }

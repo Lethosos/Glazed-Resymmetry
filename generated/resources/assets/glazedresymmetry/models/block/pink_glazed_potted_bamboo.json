@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/potted_bamboo",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bamboo": "minecraft:block/bamboo_stalk",
+    "flowerpot": "glazedresymmetry:block/pink_glazed_flower_pot",
+    "leaf": "minecraft:block/bamboo_singleleaf",
+    "particle": "glazedresymmetry:block/pink_glazed_flower_pot"
+  }
+}

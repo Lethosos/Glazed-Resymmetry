@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "glazedresymmetry:block/white_glazed_terracotta_pillar_top",
+    "side": "glazedresymmetry:block/white_glazed_terracotta_pillar"
+  }
+}

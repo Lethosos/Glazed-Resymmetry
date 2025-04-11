@@ -1,0 +1,16 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "clayworks"
+        }
+    ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "clayworks:glazed_terracotta"
+  },
+  "result": {
+    "count": 4,
+    "id": "glazedresymmetry:glazed_shard"
+  }
+}

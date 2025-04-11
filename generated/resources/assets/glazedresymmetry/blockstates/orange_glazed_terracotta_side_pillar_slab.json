@@ -1,0 +1,49 @@
+{
+  "variants": {
+    "facing=east,type=bottom": {
+      "model": "glazedresymmetry:block/orange_glazed_terracotta_side_pillar_slab",
+      "y": 90
+    },
+    "facing=east,type=double": {
+      "model": "glazedresymmetry:block/orange_glazed_terracotta_side_pillar_slab_double",
+      "y": 90
+    },
+    "facing=east,type=top": {
+      "model": "glazedresymmetry:block/orange_glazed_terracotta_side_pillar_slab_top",
+      "y": 90
+    },
+    "facing=north,type=bottom": {
+      "model": "glazedresymmetry:block/orange_glazed_terracotta_side_pillar_slab"
+    },
+    "facing=north,type=double": {
+      "model": "glazedresymmetry:block/orange_glazed_terracotta_side_pillar_slab_double"
+    },
+    "facing=north,type=top": {
+      "model": "glazedresymmetry:block/orange_glazed_terracotta_side_pillar_slab_top"
+    },
+    "facing=south,type=bottom": {
+      "model": "glazedresymmetry:block/orange_glazed_terracotta_side_pillar_slab",
+      "y": 180
+    },
+    "facing=south,type=double": {
+      "model": "glazedresymmetry:block/orange_glazed_terracotta_side_pillar_slab_double",
+      "y": 180
+    },
+    "facing=south,type=top": {
+      "model": "glazedresymmetry:block/orange_glazed_terracotta_side_pillar_slab_top",
+      "y": 180
+    },
+    "facing=west,type=bottom": {
+      "model": "glazedresymmetry:block/orange_glazed_terracotta_side_pillar_slab",
+      "y": 270
+    },
+    "facing=west,type=double": {
+      "model": "glazedresymmetry:block/orange_glazed_terracotta_side_pillar_slab_double",
+      "y": 270
+    },
+    "facing=west,type=top": {
+      "model": "glazedresymmetry:block/orange_glazed_terracotta_side_pillar_slab_top",
+      "y": 270
+    }
+  }
+}

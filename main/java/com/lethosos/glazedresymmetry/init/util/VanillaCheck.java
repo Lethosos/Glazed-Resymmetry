@@ -1,5 +1,7 @@
 package com.lethosos.glazedresymmetry.init.util;
 
+import com.teamabnormals.clayworks.core.registry.ClayworksBlocks;
+
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
@@ -42,10 +44,10 @@ public class VanillaCheck {
 		case "pink":
 			return Blocks.PINK_GLAZED_TERRACOTTA;
 
-		// Might add more colors here for compat? Will think on this.
-		//case "glazed":
-		//	return Clayworks.GLAZED_TERRACOTTA;
-
+		//Clayworks compat
+		case "glazed":
+			return ClayworksBlocks.GLAZED_TERRACOTTA.get();
+			//return Blocks.TERRACOTTA;
 		}
 		
 		//Don't need this, but syntax requires it

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "s": {
+      "item": "glazedresymmetry:blue_glazed_shard"
+    }
+  },
+  "pattern": [
+    "s s",
+    "s s"
+  ],
+  "result": {
+    "count": 1,
+    "id": "glazedresymmetry:blue_glazed_terracotta_pillar"
+  }
+}

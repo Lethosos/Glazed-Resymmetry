@@ -1,0 +1,24 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "clayworks"
+        }
+    ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "s": {
+      "item": "glazedresymmetry:glazed_shard"
+    }
+  },
+  "pattern": [
+    "s s",
+    "   ",
+    "s s"
+  ],
+  "result": {
+    "count": 1,
+    "id": "glazedresymmetry:centered_glazed_terracotta"
+  }
+}

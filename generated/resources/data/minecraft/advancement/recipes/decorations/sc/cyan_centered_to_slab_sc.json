@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cyan": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:cyan_glazed_terracotta"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:sc/cyan_centered_to_slab_sc"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cyan"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:sc/cyan_centered_to_slab_sc"
+    ]
+  }
+}

@@ -12,6 +12,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 
+//Currently this is off because Patterned Glass is not updated yet 
+@SuppressWarnings("unused")
 public class GlazedGlassBlock extends StainedGlassBlock implements BeaconBeamBlock {
 
 	public GlazedGlassBlock(DyeColor dyeColor, Properties properties) {

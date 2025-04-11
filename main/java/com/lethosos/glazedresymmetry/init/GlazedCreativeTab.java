@@ -6,7 +6,6 @@ import java.util.function.Supplier;
 
 import com.lethosos.glazedresymmetry.GlazedResymmetry;
 import com.lethosos.glazedresymmetry.Registration;
-
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -19,11 +18,12 @@ public class GlazedCreativeTab {
 	public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Registration.MOD_ID);
 	
 	public static List<Item> TabList = new ArrayList<Item>();
+	public static List<Item> TabList2 = new ArrayList<Item>();
 	
-    public static final Supplier<CreativeModeTab> TAB_KEY = TABS.register("glazed_tab",
+	public static final Supplier<CreativeModeTab> TAB_KEY = TABS.register("glazed_tab",
 			() -> CreativeModeTab.builder()
 			.title(Component.translatable("itemGroup.glazedresymmetry"))
-			.icon(() -> new ItemStack(GlazedBlocks.WHITE.SHARD.get()))
+			.icon(() -> new ItemStack(randomIcon()))
 			.displayItems((itemDisplayParameters, output) -> {
 				if (!TabList.isEmpty()) {
 					TabList.forEach((item) -> output.accept(item));
@@ -35,5 +35,10 @@ public class GlazedCreativeTab {
 	public static void register(IEventBus eventBus)
 	{
 		TABS.register(eventBus);
+	}
+	
+	private static Item randomIcon() {
+		int min = 0, max = GlazedBlocks.groupList.size() - 1;
+		return GlazedBlocks.groupList.get(min + (int)(Math.random() * ((max - min) + 1))).SHARD.get();
 	}
 }

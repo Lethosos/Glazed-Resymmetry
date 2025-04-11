@@ -1,6 +1,0 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "glazedresymmetry:item/magenta_glazed_shard"
-    }
-}

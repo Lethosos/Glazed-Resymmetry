@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:magenta_glazed_terracotta"
+  },
+  "result": {
+    "count": 4,
+    "id": "glazedresymmetry:magenta_glazed_shard"
+  }
+}

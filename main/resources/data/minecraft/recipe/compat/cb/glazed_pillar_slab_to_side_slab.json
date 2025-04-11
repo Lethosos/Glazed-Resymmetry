@@ -1,0 +1,19 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "clayworks"
+        }
+    ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "glazedresymmetry:glazed_terracotta_pillar_slab"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "glazedresymmetry:glazed_terracotta_side_pillar_slab"
+  }
+}

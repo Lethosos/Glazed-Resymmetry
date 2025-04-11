@@ -43,5 +43,4 @@ public class GlazedSlabBlock extends SlabBlock {
 	public PushReaction getPistonPushReaction(BlockState blockState) {
 		return PushReaction.PUSH_ONLY;
 	}
-	
 }

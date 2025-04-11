@@ -13,6 +13,8 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 
+//Currently this is off because Patterned Glass is not updated yet 
+@SuppressWarnings("unused")
 public class GlazedGlassPillar extends StainedGlassBlock implements BeaconBeamBlock{
 
 	public GlazedGlassPillar(DyeColor dyeColor, Properties properties) {

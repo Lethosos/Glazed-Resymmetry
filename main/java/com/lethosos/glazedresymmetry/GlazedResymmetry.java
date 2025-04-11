@@ -6,11 +6,13 @@ import org.slf4j.Logger;
 //import com.lethosos.glazedresymmetry.compat.PatternedGlass;
 import com.lethosos.glazedresymmetry.init.GlazedBlocks;
 import com.lethosos.glazedresymmetry.init.GlazedCreativeTab;
+import com.lethosos.glazedresymmetry.init.util.GlazedSounds;
 import com.mojang.logging.LogUtils;
 
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModList;
 //import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
@@ -26,19 +28,24 @@ public class GlazedResymmetry {
     // Directly reference a log4j logger.
     public static final Logger LOGGER = LogUtils.getLogger();
     
-    //@EventBusSubscriber(modid = Registration.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    //Test case switch, don't worry about it.
+    public static Boolean CLAYWORKS = false;
+    //public static Boolean CLAYWORKS = true;
     
     //ModContainer needed for config; we don't use one right now
     //public GlazedResymmetry(IEventBus modEventBus, ModContainer modContainer) {
     public GlazedResymmetry(IEventBus modEventBus) {
-        modEventBus.addListener(this::commonSetup);
+        if (ModList.get().isLoaded("clayworks")) { CLAYWORKS = true; }
+        
+    	modEventBus.addListener(this::commonSetup);
 
     	//Do we have a @SubscribeEvent somewhere?
         NeoForge.EVENT_BUS.register(this);
-
+        
         GlazedBlocks.register(modEventBus);
-        //GlazedItems.register(modEventBus);
-    	GlazedCreativeTab.register(modEventBus);
+        GlazedBlocks.PATTERNS.register(modEventBus);
+        GlazedSounds.SOUND_EVENTS.register(modEventBus);
+        GlazedCreativeTab.register(modEventBus);
     	
         modEventBus.addListener(this::addCreative);
 
@@ -46,34 +53,23 @@ public class GlazedResymmetry {
         //modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
     
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-		//GlazedBlocks.setupTab();
-		//GlazedBlocks.setupTabEditors(event);
-		//GlazedItems.setupTabEditors();//(event);
-		//Clayworks.setupTabEditors(event);
-		//PatternedGlass.setupTabEditors(event);
-		//PatternedClayworks.setupTabEditors(event);
-    }
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {}
     
 	private void commonSetup(final FMLCommonSetupEvent event) {
     	event.enqueueWork(() -> {
-    		//LOGGER.info("HELLO FROM SETUP");
     		GlazedBlocks.setupTab();
-    		//GlazedPotPatterns.registerPatterns();
+    		GlazedBlocks.registerPatterns();
+    		GlazedBlocks.registerPots();
     	});
     }
 	
 	@SubscribeEvent
-	public void onServerStarting(ServerStartingEvent event) {
-		
-	}
+	public void onServerStarting(ServerStartingEvent event) {}
 	
 	@EventBusSubscriber(modid = Registration.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientModEvents {
 		@SubscribeEvent
 		public static void onClientStartup(FMLClientSetupEvent event) {
-			
 		}
 	}
 }

@@ -1,0 +1,12 @@
+{
+  "values": [
+     {
+        "id": "glazedresymmetry:centered_glazed_terracotta",
+        "required": false
+     },
+     {
+        "id": "glazedresymmetry:glazed_terracotta_pillar",
+        "required": false
+     }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:sc/white_block_to_centered_sc"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_white": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:white_glazed_terracotta"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_white"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:sc/white_block_to_centered_sc"
+    ]
+  }
+}

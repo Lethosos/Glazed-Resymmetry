@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "glazedresymmetry:block/light_blue_centered_glazed_terracotta"
+  }
+}

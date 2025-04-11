@@ -1,0 +1,16 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "clayworks"
+        }
+    ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "glazedresymmetry:glazed_blocks"
+  },
+  "result": {
+    "count": 4,
+    "id": "glazedresymmetry:glazed_shard"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "glazedresymmetry:item/cyan_glazed_shard"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "glazedresymmetry:yellow_centered_glazed_terracotta"
+    }
+  },
+  "pattern": [
+    "BBB"
+  ],
+  "result": {
+    "count": 6,
+    "id": "glazedresymmetry:yellow_centered_glazed_terracotta_slab"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pink": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:pink_glazed_terracotta"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:sc/pink_back_to_block_sc"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pink"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:sc/pink_back_to_block_sc"
+    ]
+  }
+}

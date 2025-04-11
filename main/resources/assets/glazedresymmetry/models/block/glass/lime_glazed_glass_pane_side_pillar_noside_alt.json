@@ -1,6 +1,0 @@
-{
-  "parent": "glazedresymmetry:block/glass/template_glass_side_pane_noside_alt",
-  "textures": {
-    "pane": "glazedresymmetry:block/glass/lime_glazed_glass_pillar"
-  }
-}

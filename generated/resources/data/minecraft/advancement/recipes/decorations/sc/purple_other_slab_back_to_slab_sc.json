@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_purple": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:purple_glazed_terracotta"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:sc/purple_other_slab_back_to_slab_sc"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_purple"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:sc/purple_other_slab_back_to_slab_sc"
+    ]
+  }
+}

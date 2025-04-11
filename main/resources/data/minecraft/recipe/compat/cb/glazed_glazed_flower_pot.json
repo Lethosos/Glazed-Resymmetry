@@ -1,0 +1,22 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "clayworks"
+        }
+    ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:flower_pot"
+    },
+    {
+      "item": "glazedresymmetry:glazed_shard"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "glazedresymmetry:glazed_flower_pot"
+  }
+}
