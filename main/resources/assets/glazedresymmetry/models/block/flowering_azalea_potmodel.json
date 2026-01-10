@@ -1,0 +1,9 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "glazedresymmetry:block/template_azalea_potmodel",
+	"textures": {
+		"plant": "minecraft:block/potted_flowering_azalea_bush_plant",
+		"side": "minecraft:block/potted_flowering_azalea_bush_side",
+		"top": "minecraft:block/potted_flowering_azalea_bush_top"
+	}
+}

@@ -1,0 +1,17 @@
+{
+  "primaryColor": "#993333",
+  "secondaryColor": "#f2d9d9",
+  "particleColor": "#993333",
+  "flowerTag": "productivebees:flowers/glazed",
+  "beeTexture": "glazedresymmetry:textures/entity/bee/glazed/bee",
+  "renderer": "thicc",
+  "attributes": {
+    "weather_tolerance": "2"
+    },
+  "conditions": [
+    {
+      "modid": "productivebees",
+      "type": "neoforge:mod_loaded"
+    }
+  ]
+}

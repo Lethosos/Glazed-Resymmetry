@@ -10,7 +10,6 @@ import org.jetbrains.annotations.Nullable;
 
 import com.lethosos.glazedresymmetry.GlazedResymmetry;
 import com.lethosos.glazedresymmetry.Registration;
-import com.lethosos.glazedresymmetry.compat.Clayworks;
 import com.lethosos.glazedresymmetry.init.GlazedBlocks;
 import com.lethosos.glazedresymmetry.init.util.GlazedTags;
 
@@ -32,6 +31,16 @@ public class GlazedItemTagProvider extends ItemTagsProvider {
    		tag(GlazedTags.Items.WHITE_BLOCKS)
    			.add(GlazedBlocks.WHITE.CENTERED.asItem())
             .add(GlazedBlocks.WHITE.PILLAR.asItem());
+   		/*
+   		tag(GlazedTags.Items.WHITE_GLASS)
+			.add(PatternedGlass.WHITE_G.GLAZED.asItem())
+			.add(PatternedGlass.WHITE_G.CENTERED.asItem())
+			.add(PatternedGlass.WHITE_G.PILLAR.asItem());
+		tag(GlazedTags.Items.WHITE_PANES)
+			.add(PatternedGlass.WHITE_G.CENTERED_PANE.asItem())
+			.add(PatternedGlass.WHITE_G.PILLAR_TOP_PANE.asItem())
+   			.add(PatternedGlass.WHITE_G.SIDE_PILLAR_PANE.asItem());
+   			*/
    		
    		tag(GlazedTags.Items.LIGHT_GRAY_SLABS)
 			.add(GlazedBlocks.LIGHT_GRAY.SLAB.asItem())

@@ -33,12 +33,27 @@ public class GlazedBlockLootTableProvider extends BlockLootSubProvider{
 				add(group.SIDE_PILLAR_SLAB.get(),
 	                block -> createSlabItemTable(group.SIDE_PILLAR_SLAB.get()));
 			
-				dropPottedContents(group.FLOWER_POT.get());
-				group.pottedPots.forEach((pot) -> {
-					dropPottedContents(pot.get());
-				});
+				dropSelf(group.FLOWER_POT.get());
+				//dropPottedContents(group.FLOWER_POT.get());
+				//group.pottedPots.forEach((pot) -> {
+				//	dropPottedContents(pot.get());
+				//});
+				
+				dropWhenSilkTouch(group.GLASS.GLAZED.get());
+				dropWhenSilkTouch(group.GLASS.CENTERED.get());
+				dropWhenSilkTouch(group.GLASS.PILLAR.get());
+				
+				dropWhenSilkTouch(group.GLASS.GLAZED_PANE.get());
+				dropWhenSilkTouch(group.GLASS.CENTERED_PANE.get());
+				dropWhenSilkTouch(group.GLASS.PILLAR_TOP_PANE.get());
+				dropWhenSilkTouch(group.GLASS.SIDE_PILLAR_PANE.get());
 			}
 		});
+		
+		add(GlazedBlocks.AZALEA.get(), block -> noDrop());
+		add(GlazedBlocks.BAMBOO.get(), block -> noDrop());
+		add(GlazedBlocks.CACTUS.get(), block -> noDrop());
+		add(GlazedBlocks.FLOWERING_AZALEA.get(), block -> noDrop());
 	}
 	
     @Override

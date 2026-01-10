@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:husbandry/wax_on",
+  "display": {
+    "icon": {
+      "item": "minecraft:decorated_pot"
+    },
+    "title": "Not A Pinata",
+    "description": "Quit hitting bees with sticks!",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "minecraft:player_hurt_entity": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "productivebees:glazed_bee",
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:stick"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "minecraft:player_hurt_entity"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

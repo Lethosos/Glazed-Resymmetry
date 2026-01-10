@@ -1,6 +1,6 @@
 package com.lethosos.glazedresymmetry.init.util;
 
-import com.teamabnormals.clayworks.core.registry.ClayworksBlocks;
+//import com.teamabnormals.clayworks.core.registry.ClayworksBlocks;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -45,8 +45,8 @@ public class VanillaCheck {
 			return Blocks.PINK_GLAZED_TERRACOTTA;
 
 		//Clayworks compat
-		case "glazed":
-			return ClayworksBlocks.GLAZED_TERRACOTTA.get();
+		//case "glazed":
+			//return ClayworksBlocks.GLAZED_TERRACOTTA.get();
 			//return Blocks.TERRACOTTA;
 		}
 		

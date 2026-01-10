@@ -2,7 +2,6 @@ package com.lethosos.glazedresymmetry.datagen;
 
 import java.util.ArrayList;
 import java.util.Collections;
-//import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
@@ -10,8 +9,9 @@ import com.lethosos.glazedresymmetry.GlazedResymmetry;
 import com.lethosos.glazedresymmetry.Registration;
 import com.lethosos.glazedresymmetry.compat.Clayworks;
 import com.lethosos.glazedresymmetry.init.GlazedBlocks;
-import com.lethosos.glazedresymmetry.init.GlazedGroup;
+import com.lethosos.glazedresymmetry.init.util.GlazedGroup;
 import com.lethosos.glazedresymmetry.init.util.GlazedTags;
+import com.lethosos.glazedresymmetry.init.util.PatternedGroup;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -26,14 +26,17 @@ import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
-@EventBusSubscriber(modid = Registration.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = Registration.MOD_ID)
 public class DataGenerators {
 
 	public static List<GlazedGroup> dataList = new ArrayList<GlazedGroup>();
+	public static List<PatternedGroup> dataList2 = new ArrayList<PatternedGroup>();
 	
 	//Add tagkeys here to use
 	private static void addKeys() {
 		GlazedBlocks.WHITE.addTags(GlazedTags.Items.WHITE_SLABS, GlazedTags.Items.WHITE_BLOCKS);
+		//PatternedGlass.WHITE_G.addTags(GlazedTags.Items.WHITE_GLASS, GlazedTags.Items.WHITE_PANES);
+		
 		GlazedBlocks.LIGHT_GRAY.addTags(GlazedTags.Items.LIGHT_GRAY_SLABS, GlazedTags.Items.LIGHT_GRAY_BLOCKS);
 		GlazedBlocks.GRAY.addTags(GlazedTags.Items.GRAY_SLABS, GlazedTags.Items.GRAY_BLOCKS);
 		GlazedBlocks.BLACK.addTags(GlazedTags.Items.BLACK_SLABS, GlazedTags.Items.BLACK_BLOCKS);

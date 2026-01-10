@@ -7,17 +7,19 @@ import org.slf4j.Logger;
 import com.lethosos.glazedresymmetry.init.GlazedBlocks;
 import com.lethosos.glazedresymmetry.init.GlazedCreativeTab;
 import com.lethosos.glazedresymmetry.init.util.GlazedSounds;
+import com.lethosos.glazedresymmetry.init.util.ModBlockEntities;
+import com.lethosos.glazedresymmetry.init.util.renderer.GlazedFlowerPotRenderer;
 import com.mojang.logging.LogUtils;
 
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModList;
-//import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
@@ -43,6 +45,7 @@ public class GlazedResymmetry {
         NeoForge.EVENT_BUS.register(this);
         
         GlazedBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         GlazedBlocks.PATTERNS.register(modEventBus);
         GlazedSounds.SOUND_EVENTS.register(modEventBus);
         GlazedCreativeTab.register(modEventBus);
@@ -66,10 +69,15 @@ public class GlazedResymmetry {
 	@SubscribeEvent
 	public void onServerStarting(ServerStartingEvent event) {}
 	
-	@EventBusSubscriber(modid = Registration.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+	@EventBusSubscriber(modid = Registration.MOD_ID, value = Dist.CLIENT)
 	public static class ClientModEvents {
 		@SubscribeEvent
 		public static void onClientStartup(FMLClientSetupEvent event) {
 		}
+		
+        @SubscribeEvent
+        public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+        	event.registerBlockEntityRenderer(ModBlockEntities.FLOWERPOT_BE.get(), GlazedFlowerPotRenderer::new);
+        }
 	}
 }

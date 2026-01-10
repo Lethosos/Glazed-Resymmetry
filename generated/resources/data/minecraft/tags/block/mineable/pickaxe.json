@@ -95,30 +95,6 @@
     "glazedresymmetry:pink_centered_glazed_terracotta_slab",
     "glazedresymmetry:pink_glazed_terracotta_pillar",
     "glazedresymmetry:pink_glazed_terracotta_pillar_slab",
-    "glazedresymmetry:pink_glazed_terracotta_side_pillar_slab",
-    {
-      "id": "glazedresymmetry:glazed_terracotta_slab",
-      "required": false
-    },
-    {
-      "id": "glazedresymmetry:centered_glazed_terracotta",
-      "required": false
-    },
-    {
-      "id": "glazedresymmetry:centered_glazed_terracotta_slab",
-      "required": false
-    },
-    {
-      "id": "glazedresymmetry:glazed_terracotta_pillar",
-      "required": false
-    },
-    {
-      "id": "glazedresymmetry:glazed_terracotta_pillar_slab",
-      "required": false
-    },
-    {
-      "id": "glazedresymmetry:glazed_terracotta_side_pillar_slab",
-      "required": false
-    }
+    "glazedresymmetry:pink_glazed_terracotta_side_pillar_slab"
   ]
 }

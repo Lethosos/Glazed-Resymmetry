@@ -1,7 +1,7 @@
 package com.lethosos.glazedresymmetry.datagen;
 
 import com.lethosos.glazedresymmetry.Registration;
-
+import com.lethosos.glazedresymmetry.init.GlazedBlocks;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 
@@ -27,6 +27,14 @@ public class GlazedLanguageProvider extends LanguageProvider {
         		this.addBlock(group.SIDE_PILLAR_SLAB, formatString(group.groupName) + " Glazed Terracotta Slade Pillar Slab");
         		this.addBlock(group.FLOWER_POT, formatString(group.groupName) + " Glazed Flower Pot");
         		this.addItem(group.SHARD, formatString(group.groupName) + " Glazed Shard");
+        		
+            	this.addBlock(group.GLASS.GLAZED, formatString(group.groupName) + " Glazed Glass");
+            	this.addBlock(group.GLASS.CENTERED, formatString(group.groupName) + " Centered Glazed Glass");
+            	this.addBlock(group.GLASS.PILLAR, formatString(group.groupName) + " Glazed Pillar Glass");
+            	this.addBlock(group.GLASS.GLAZED_PANE, formatString(group.groupName) + " Glazed Glass Pane");
+            	this.addBlock(group.GLASS.CENTERED_PANE, formatString(group.groupName) + " Centered Glazed Glass Pane");
+            	this.addBlock(group.GLASS.PILLAR_TOP_PANE, formatString(group.groupName) + " Glazed Glass Pillar Top Pane");
+            	this.addBlock(group.GLASS.SIDE_PILLAR_PANE, formatString(group.groupName) + " Glazed Glass Side Pillar Pane");
         	}
         	else
         	{
@@ -40,6 +48,8 @@ public class GlazedLanguageProvider extends LanguageProvider {
         		this.addItem(group.SHARD, "Glazed Shard");
         	}
         });
+        
+        this.addItem(GlazedBlocks.WAXED_SHARD, "Wax-Covered Glazed Shard");
     }
     
     private static String formatString(String str) {

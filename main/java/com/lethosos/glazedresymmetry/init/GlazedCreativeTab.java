@@ -29,6 +29,10 @@ public class GlazedCreativeTab {
 					TabList.forEach((item) -> output.accept(item));
 					GlazedResymmetry.LOGGER.info("Glazed Creative Tab List is loaded!");
 				}
+				if (!TabList2.isEmpty()) {
+					TabList2.forEach((item) -> output.accept(item));
+					GlazedResymmetry.LOGGER.info("Compat Creative Tab List is loaded!");
+				}
 			})
 			.build());
 

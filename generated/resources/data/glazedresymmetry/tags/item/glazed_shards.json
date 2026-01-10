@@ -15,10 +15,6 @@
     "glazedresymmetry:blue_glazed_shard",
     "glazedresymmetry:purple_glazed_shard",
     "glazedresymmetry:magenta_glazed_shard",
-    "glazedresymmetry:pink_glazed_shard",
-    {
-      "id": "glazedresymmetry:glazed_shard",
-      "required": false
-    }
+    "glazedresymmetry:pink_glazed_shard"
   ]
 }

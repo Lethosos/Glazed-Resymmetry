@@ -1,0 +1,9 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"parent": "glazedresymmetry:block/template_cactus_potmodel",
+	"textures": {
+		"cactus_top": "block/cactus_top",
+		"cactus": "block/cactus_side"
+	}
+}

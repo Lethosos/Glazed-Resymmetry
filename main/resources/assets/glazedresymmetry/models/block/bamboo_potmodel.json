@@ -1,0 +1,9 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"parent" : "glazedresymmetry:block/template_bamboo_potmodel",
+	"textures": {
+		"bamboo": "block/bamboo_stalk",
+		"leaf": "block/bamboo_singleleaf"
+	}
+}

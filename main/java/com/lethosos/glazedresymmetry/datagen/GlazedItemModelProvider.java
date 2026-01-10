@@ -31,14 +31,18 @@ public class GlazedItemModelProvider extends ItemModelProvider {
 				basicItem(group.FLOWER_POT.asItem());
 				basicItem(group.SHARD.get());
 						
-				group.pottedPots.forEach((pot) -> shadowItem(pot.asItem(), resourceItem(group.groupName + "_glazed_flower_pot")));
+				simpleBlockItem(group.GLASS.GLAZED.get());
+				simpleBlockItem(group.GLASS.CENTERED.get());
+				simpleBlockItem(group.GLASS.PILLAR.get());
+				
+				shadowItem(group.GLASS.GLAZED_PANE.get().asItem(), resourceBlock(group.groupName + "_glazed_glass"));
+				shadowItem(group.GLASS.CENTERED_PANE.get().asItem(), resourceBlock(group.groupName + "_centered_glazed_glass"));
+				shadowItem(group.GLASS.PILLAR_TOP_PANE.get().asItem(), resourceBlock(group.groupName + "_glazed_glass_pillar_top"));
+				shadowItem(group.GLASS.SIDE_PILLAR_PANE.get().asItem(), resourceBlock(group.groupName + "_glazed_glass_pillar"));
 			}
-			/*
-			else {
-				Clayworks.GLAZED.pottedPots.forEach((pot) -> shadowItem(pot.asItem(), resourceItem("glazed_flower_pot")));
-			}
-			*/
 		});
+		
+		basicItem(GlazedBlocks.WAXED_SHARD.get());
 	}
 	
 	public ResourceLocation resourceItem(String path) {
@@ -47,10 +51,20 @@ public class GlazedItemModelProvider extends ItemModelProvider {
 	public ResourceLocation resourceVanillaItem(String path) {
 		return ResourceLocation.fromNamespaceAndPath("minecraft", "item/" + path);
 	}
+	public ResourceLocation resourceBlock(String path) {
+		return ResourceLocation.fromNamespaceAndPath(Registration.MOD_ID, "block/" + path);
+	}
 	
     public ItemModelBuilder shadowItem(Item item, ResourceLocation texSource) {
         return getBuilder(item.toString())
                 .parent(new ModelFile.UncheckedModelFile("item/generated"))
-                .texture("layer0", ResourceLocation.fromNamespaceAndPath(texSource.getNamespace(), texSource.getPath()));
+                .ao(false)
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(texSource.getNamespace(), texSource.getPath()))
+                .renderType("translucent");
+    }
+    public ItemModelBuilder shadowModelItem(ResourceLocation item, String model, String texName, ResourceLocation texSource) {
+        return getBuilder(item.toString())
+                .parent(new ModelFile.UncheckedModelFile(model))
+                .texture(texName, ResourceLocation.fromNamespaceAndPath(texSource.getNamespace(), texSource.getPath()));
     }
 }

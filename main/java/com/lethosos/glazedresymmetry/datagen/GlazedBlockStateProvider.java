@@ -2,12 +2,13 @@ package com.lethosos.glazedresymmetry.datagen;
 
 import com.lethosos.glazedresymmetry.Registration;
 import com.lethosos.glazedresymmetry.init.util.GlazedSlabBlock;
-import com.lethosos.glazedresymmetry.init.util.PottablePlants;
 import com.lethosos.glazedresymmetry.init.util.VanillaCheck;
 
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -16,7 +17,6 @@ import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.registries.DeferredBlock;
 
 public class GlazedBlockStateProvider extends BlockStateProvider {
 	private static final int DEFAULT_ANGLE_OFFSET = 180;
@@ -34,7 +34,10 @@ public class GlazedBlockStateProvider extends BlockStateProvider {
 	protected ModelFile rotated_slab_double;
 	protected ModelFile emptyFlowerPot;
 	protected ModelFile pottedPot;
+	protected ModelFile glass_pane;
 
+	protected ModelFile glass;
+	protected ModelFile pane;
 	
     public GlazedBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, Registration.MOD_ID, exFileHelper);
@@ -49,8 +52,8 @@ public class GlazedBlockStateProvider extends BlockStateProvider {
 				pillar_side = resourceBlock(group.groupName + "_glazed_terracotta_pillar");
 				pillar_top = resourceBlock(group.groupName + "_glazed_terracotta_pillar_top");
 			
-				blockWithItem(group.CENTERED);
-				pillarBlock(group.PILLAR);
+				blockWithItem(group.CENTERED.get());
+				pillarBlock(group.PILLAR.get());
 			
 				slabBlock(group.CENTERED_SLAB.get(), blockTexture(group.CENTERED.get()), centered);
 				slabBlock(group.PILLAR_SLAB.get(), blockTexture(group.PILLAR.get()), pillar_side, pillar_top, pillar_top);
@@ -80,170 +83,55 @@ public class GlazedBlockStateProvider extends BlockStateProvider {
 					.texture("flowerpot", resourceBlock(group.groupName + "_glazed_flower_pot"))
 					.texture("particle", resourceBlock(group.groupName + "_glazed_flower_pot"));
 				simpleBlock(group.FLOWER_POT.get(), emptyFlowerPot);
-				group.pottedPots.forEach((pot) -> {
-					if (pot.get().getPotted() == Blocks.AZALEA) {
-						pottedPot = models()
-							.withExistingParent(group.groupName + "_glazed_potted_" + PottablePlants.getName(pot.get().getPotted()),
-									resourceVanillaBlock("template_potted_azalea_bush"))
-							.renderType("cutout")
-							.texture("flowerpot", resourceBlock(group.groupName + "_glazed_flower_pot"))
-							.texture("particle", resourceBlock(group.groupName + "_glazed_flower_pot"))
-							.texture("plant", "minecraft:block/potted_azalea_bush_plant")
-							.texture("side", "minecraft:block/potted_azalea_bush_side")
-							.texture("top", "minecraft:block/potted_azalea_bush_top");
-						simpleBlock(pot.get(), pottedPot);
-					}
-					else if (pot.get().getPotted() == Blocks.FLOWERING_AZALEA) {
-						pottedPot = models()
-							.withExistingParent(group.groupName + "_glazed_potted_" + PottablePlants.getName(pot.get().getPotted()),
-									resourceVanillaBlock("template_potted_azalea_bush"))
-							.renderType("cutout")
-							.texture("flowerpot", resourceBlock(group.groupName + "_glazed_flower_pot"))
-							.texture("particle", resourceBlock(group.groupName + "_glazed_flower_pot"))
-							.texture("plant", "minecraft:block/potted_flowering_azalea_bush_plant")
-							.texture("side", "minecraft:block/potted_flowering_azalea_bush_side")
-							.texture("top", "minecraft:block/potted_flowering_azalea_bush_top");
-						simpleBlock(pot.get(), pottedPot);
-					}
-					else if (pot.get().getPotted() == Blocks.BAMBOO) {
-						pottedPot = models()
-							.withExistingParent(group.groupName + "_glazed_potted_" + PottablePlants.getName(pot.get().getPotted()),
-									resourceVanillaBlock("potted_bamboo"))
-							.renderType("cutout")
-							.texture("flowerpot", resourceBlock(group.groupName + "_glazed_flower_pot"))
-							.texture("particle", resourceBlock(group.groupName + "_glazed_flower_pot"))
-							.texture("bamboo", "minecraft:block/bamboo_stalk")
-							.texture("leaf", "minecraft:block/bamboo_singleleaf");
-						simpleBlock(pot.get(), pottedPot);
-					}
-					else if (pot.get().getPotted() == Blocks.CACTUS) {
-						pottedPot = models()
-							.withExistingParent(group.groupName + "_glazed_potted_" + PottablePlants.getName(pot.get().getPotted()),
-									resourceVanillaBlock("potted_cactus"))
-							.texture("flowerpot", resourceBlock(group.groupName + "_glazed_flower_pot"))
-							.texture("particle", resourceBlock(group.groupName + "_glazed_flower_pot"))
-							.texture("cactus_top", "minecraft:block/cactus_top")
-							.texture("cactus", "minecraft:block/cactus_side");
-						simpleBlock(pot.get(), pottedPot);
-					}
-					else {
-						pottedPot = models()
-							.withExistingParent(group.groupName + "_glazed_potted_" + PottablePlants.getName(pot.get().getPotted()),
-								resourceVanillaBlock("flower_pot_cross"))
-							.renderType("cutout")
-							.texture("flowerpot", resourceBlock(group.groupName + "_glazed_flower_pot"))
-							.texture("particle", resourceBlock(group.groupName + "_glazed_flower_pot"))
-							.texture("plant", blockTexture(pot.get().getPotted()));
-						simpleBlock(pot.get(), pottedPot);
-					}
-				});
+				
+				//Glass
+				glassAxisBlock(group.GLASS.GLAZED.get());
+				glassBlock(group.GLASS.CENTERED.get());
+				glassPillarBlock(group.GLASS.PILLAR.get());
+				
+				//Glass Panes
+				//glass_pane = models()
+				//	.withExistingParent(group.groupName + "_glazed_glass", resourceVanillaBlock("template_stained_glass_pane"))
+				//	.texture("pane", group.groupName + "_glazed_glass");
+				//paneBlock
+				
+				glassPaneBlock((IronBarsBlock)group.GLASS.GLAZED_PANE.get(),
+						resourceBlock(group.groupName + "_glazed_glass"),
+						resourceVanillaBlock(group.groupName + "_stained_glass_pane_top"));
+				glassPaneBlock((IronBarsBlock)group.GLASS.CENTERED_PANE.get(),
+						resourceBlock(group.groupName + "_centered_glazed_glass"),
+						resourceVanillaBlock(group.groupName + "_stained_glass_pane_top"));
+				glassPaneBlock((IronBarsBlock)group.GLASS.PILLAR_TOP_PANE.get(),
+						resourceBlock(group.groupName + "_glazed_glass_pillar_top"),
+						resourceVanillaBlock(group.groupName + "_stained_glass_pane_top"));
+				glassPaneBlock((IronBarsBlock)group.GLASS.SIDE_PILLAR_PANE.get(),
+						resourceBlock(group.groupName + "_glazed_glass_pillar"),
+						resourceVanillaBlock(group.groupName + "_stained_glass_pane_top"));
 			}
-			/*
-			else {
-				vanilla = blockTexture(VanillaCheck.returnGlazed(group.groupName));
-				centered = resourceBlock("centered_glazed_terracotta");
-				pillar_side = resourceBlock("glazed_terracotta_pillar");
-				pillar_top = resourceBlock("glazed_terracotta_pillar_top");
-				
-				blockWithItem(group.CENTERED);
-				pillarBlock(group.PILLAR);
-				
-				slabBlock(group.CENTERED_SLAB.get(), blockTexture(group.CENTERED.get()), centered);
-				slabBlock(group.PILLAR_SLAB.get(), blockTexture(group.PILLAR.get()), pillar_side, pillar_top, pillar_top);
-				
-				slab = models().slab("glazed_terracotta_slab", vanilla, vanilla, vanilla);
-				slab_top = models().slabTop("glazed_terracotta_slab_top", vanilla, vanilla, vanilla);
-				slab_double = models().cubeAll("glazed_terracotta_slab_double", vanilla);
-				axisSlabBlock(group.SLAB.get(), slab, slab_top, slab_double);
-				
-				rotated_slab = models()
-						.withExistingParent("glazed_terracotta_side_pillar_slab", resourceBlock("rotated_slab"))
-						.texture("side", pillar_side)
-						.texture("top", pillar_top);
-				rotated_slab_top = models()
-						.withExistingParent("glazed_terracotta_side_pillar_slab_top", resourceBlock("rotated_slab_top"))
-						.texture("side", pillar_side)
-						.texture("top", pillar_top);
-				rotated_slab_double = models()
-						.withExistingParent("glazed_terracotta_side_pillar_slab_double", resourceBlock("rotated_slab_double"))
-						.texture("side", pillar_side)
-						.texture("top", pillar_top);
-				axisSlabBlock(group.SIDE_PILLAR_SLAB.get(),	rotated_slab, rotated_slab_top, rotated_slab_double);
-				
-				//Flower Pots
-				emptyFlowerPot = models()
-						.withExistingParent("glazed_flower_pot", resourceVanillaBlock("flower_pot"))
-						.texture("flowerpot", resourceBlock("glazed_flower_pot"))
-						.texture("particle", resourceBlock("glazed_flower_pot"));
-				simpleBlock(group.FLOWER_POT.get(), emptyFlowerPot);
-				group.pottedPots.forEach((pot) -> {
-					if (pot.get().getPotted() == Blocks.AZALEA) {
-						pottedPot = models()
-								.withExistingParent("glazed_potted_" + PottablePlants.getName(pot.get().getPotted()),
-										resourceVanillaBlock("template_potted_azalea_bush"))
-								.renderType("cutout")
-								.texture("flowerpot", resourceBlock("glazed_flower_pot"))
-								.texture("particle", resourceBlock("glazed_flower_pot"))
-								.texture("plant", "minecraft:block/potted_azalea_bush_plant")
-								.texture("side", "minecraft:block/potted_azalea_bush_side")
-								.texture("top", "minecraft:block/potted_azalea_bush_top");
-							simpleBlock(pot.get(), pottedPot);
-					}
-					else if (pot.get().getPotted() == Blocks.FLOWERING_AZALEA) {
-						pottedPot = models()
-								.withExistingParent("glazed_potted_" + PottablePlants.getName(pot.get().getPotted()),
-										resourceVanillaBlock("template_potted_azalea_bush"))
-								.renderType("cutout")
-								.texture("flowerpot", resourceBlock("glazed_flower_pot"))
-								.texture("particle", resourceBlock("glazed_flower_pot"))
-								.texture("plant", "minecraft:block/potted_flowering_azalea_bush_plant")
-								.texture("side", "minecraft:block/potted_flowering_azalea_bush_side")
-								.texture("top", "minecraft:block/potted_flowering_azalea_bush_top");
-							simpleBlock(pot.get(), pottedPot);
-					}
-					else if (pot.get().getPotted() == Blocks.BAMBOO) {
-						pottedPot = models()
-								.withExistingParent("glazed_potted_" + PottablePlants.getName(pot.get().getPotted()),
-										resourceVanillaBlock("potted_bamboo"))
-								.renderType("cutout")
-								.texture("flowerpot", resourceBlock("glazed_flower_pot"))
-								.texture("particle", resourceBlock("glazed_flower_pot"))
-								.texture("bamboo", "minecraft:block/bamboo_stalk")
-								.texture("leaf", "minecraft:block/bamboo_singleleaf");
-							simpleBlock(pot.get(), pottedPot);
-					}
-					else if (pot.get().getPotted() == Blocks.CACTUS) {
-						pottedPot = models()
-								.withExistingParent("glazed_potted_" + PottablePlants.getName(pot.get().getPotted()),
-										resourceVanillaBlock("potted_cactus"))
-								.texture("flowerpot", resourceBlock("glazed_flower_pot"))
-								.texture("particle", resourceBlock("glazed_flower_pot"))
-								.texture("cactus_top", "minecraft:block/cactus_top")
-								.texture("cactus", "minecraft:block/cactus_side");
-							simpleBlock(pot.get(), pottedPot);
-					}
-					else {
-						pottedPot = models()
-							.withExistingParent("glazed_potted_" + PottablePlants.getName(pot.get().getPotted()),
-									resourceVanillaBlock("flower_pot_cross"))
-							.renderType("cutout")
-							.texture("flowerpot", resourceBlock("glazed_flower_pot"))
-							.texture("particle", resourceBlock("glazed_flower_pot"))
-							.texture("plant", blockTexture(pot.get().getPotted()));
-						simpleBlock(pot.get(), pottedPot);
-					}
-				});
-			}
-			*/
 		});
 	}
 	
-    private void blockWithItem(DeferredBlock<?> deferredBlock) {
-    	simpleBlock(deferredBlock.get(), cubeAll(deferredBlock.get()));
+    private void blockWithItem(Block block) {
+    	simpleBlock(block, cubeAll(block));
+    }
+    private void pillarBlock(Block block) {
+        logBlock((RotatedPillarBlock) block);
     }
     
-    private void pillarBlock(DeferredBlock<?> deferredBlock) {
-        logBlock((RotatedPillarBlock) deferredBlock.get());
+    private void glassBlock(Block block) {
+    	simpleBlock(block, glasscubeAll(block));
+    }
+    private void glassAxisBlock(Block block) {
+    	horizontalBlock(block, glasscubeAll(block));
+    }
+    private ModelFile glasscubeAll(Block block) {
+        return models().cubeAll(BuiltInRegistries.BLOCK.getKey(block).getPath(), blockTexture(block)).renderType("translucent");
+    }
+    private void glassPillarBlock(Block block) {
+    	logBlockWithRenderType((RotatedPillarBlock) block, "translucent");
+    }
+	private void glassPaneBlock(IronBarsBlock ironBarsBlock, ResourceLocation pane, ResourceLocation top) {
+    	paneBlockWithRenderType((IronBarsBlock) ironBarsBlock, pane, top, "translucent");
     }
 
 	public ResourceLocation resourceBlock(String path) {
@@ -275,4 +163,22 @@ public class GlazedBlockStateProvider extends BlockStateProvider {
             },
         	BlockStateProperties.WATERLOGGED);
     }
+    /*
+    public void axisGlassPaneBlock(IronBarsBlock block) {
+        getVariantBuilder(block)
+        	.forAllStatesExcept(state -> {
+                SlabType type = state.getValue(BlockStateProperties.SLAB_TYPE);
+                ModelFile model = switch (type) {
+                	default -> bottom;
+                    case TOP -> top;
+                    case DOUBLE -> doubleslab;
+                };
+                return ConfiguredModel.builder().modelFile(model)
+                	.rotationY(((int) state.getValue(GlazedSlabBlock.FACING).toYRot() + DEFAULT_ANGLE_OFFSET) % 360)
+                	.renderType("translucent")
+                	.build();
+            },
+        	BlockStateProperties.WATERLOGGED);
+    }
+    */
 }

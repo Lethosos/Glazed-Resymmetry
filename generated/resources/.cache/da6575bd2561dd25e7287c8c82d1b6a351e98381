@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-10T22:45:15.2583338	Tags for minecraft:item mod id glazedresymmetry
+// 1.21.1	2026-01-01T23:54:52.9748301	Tags for minecraft:item mod id glazedresymmetry
 08879ee37680a5715073054df2f58379b600ff35 data/glazedresymmetry/tags/item/black_glazed_blocks.json
 6835e874d949f86baf7e4a7c619516fb6dd400eb data/glazedresymmetry/tags/item/black_glazed_slabs.json
 4cec5df9a5e9fd63002a7ca9428cfff37dd58867 data/glazedresymmetry/tags/item/blue_glazed_blocks.json
@@ -7,9 +7,7 @@ a5fe1350220eca595172eb9ebf8e918a048b9a7b data/glazedresymmetry/tags/item/brown_g
 7c1e227b077a8253f78c32ee616d0b312b3eecce data/glazedresymmetry/tags/item/brown_glazed_slabs.json
 686a11631c9f06209c01bbd4c7d2c95c4232d29c data/glazedresymmetry/tags/item/cyan_glazed_blocks.json
 7cd71b697d25c47c96d08d1ab779a419adbf0ebe data/glazedresymmetry/tags/item/cyan_glazed_slabs.json
-d6329ba34324e7b47185cfd00f1a591e43cbe66a data/glazedresymmetry/tags/item/glazed_blocks.json
-1f9757a73ebdee1e4a3e7c565c8cb6a659f2923c data/glazedresymmetry/tags/item/glazed_shards.json
-7186a04b8ba3111ff441a1d7f49108ed652d0728 data/glazedresymmetry/tags/item/glazed_slabs.json
+1fdec6c071c890592ebf405598e47000c1468e1c data/glazedresymmetry/tags/item/glazed_shards.json
 69154957f94c7fab22c07cb22275fd0935af3ca7 data/glazedresymmetry/tags/item/gray_glazed_blocks.json
 690a369626a0b9aed08870ab1ab706223052179e data/glazedresymmetry/tags/item/gray_glazed_slabs.json
 aeaa38ed1aa0937337cf65d890615753b3b02f51 data/glazedresymmetry/tags/item/green_glazed_blocks.json

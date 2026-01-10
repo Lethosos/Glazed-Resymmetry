@@ -1,0 +1,80 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:white_glazed_terracotta",
+    "glazedresymmetry:white_centered_glazed_terracotta",
+    "glazedresymmetry:white_glazed_terracotta_pillar",
+
+    "minecraft:light_gray_glazed_terracotta",
+    "glazedresymmetry:light_gray_centered_glazed_terracotta",
+    "glazedresymmetry:light_gray_glazed_terracotta_pillar",
+
+    "minecraft:gray_glazed_terracotta",
+    "glazedresymmetry:gray_centered_glazed_terracotta",
+    "glazedresymmetry:gray_glazed_terracotta_pillar",
+
+    "minecraft:black_glazed_terracotta",
+    "glazedresymmetry:black_centered_glazed_terracotta",
+    "glazedresymmetry:black_glazed_terracotta_pillar",
+
+    "minecraft:brown_glazed_terracotta",
+    "glazedresymmetry:brown_centered_glazed_terracotta",
+    "glazedresymmetry:brown_glazed_terracotta_pillar",
+
+    "minecraft:red_glazed_terracotta",
+    "glazedresymmetry:red_centered_glazed_terracotta",
+    "glazedresymmetry:red_glazed_terracotta_pillar",
+
+    "minecraft:orange_glazed_terracotta",
+    "glazedresymmetry:orange_centered_glazed_terracotta",
+    "glazedresymmetry:orange_glazed_terracotta_pillar",
+
+    "minecraft:yellow_glazed_terracotta",
+    "glazedresymmetry:yellow_centered_glazed_terracotta",
+    "glazedresymmetry:yellow_glazed_terracotta_pillar",
+
+    "minecraft:lime_glazed_terracotta",
+    "glazedresymmetry:lime_centered_glazed_terracotta",
+    "glazedresymmetry:lime_glazed_terracotta_pillar",
+
+    "minecraft:green_glazed_terracotta",
+    "glazedresymmetry:green_centered_glazed_terracotta",
+    "glazedresymmetry:green_glazed_terracotta_pillar",
+
+    "minecraft:cyan_glazed_terracotta",
+    "glazedresymmetry:cyan_centered_glazed_terracotta",
+    "glazedresymmetry:cyan_glazed_terracotta_pillar",
+
+    "minecraft:light_blue_glazed_terracotta",
+    "glazedresymmetry:light_blue_centered_glazed_terracotta",
+    "glazedresymmetry:light_blue_glazed_terracotta_pillar",
+
+    "minecraft:blue_glazed_terracotta",
+    "glazedresymmetry:blue_centered_glazed_terracotta",
+    "glazedresymmetry:blue_glazed_terracotta_pillar",
+
+    "minecraft:purple_glazed_terracotta",
+    "glazedresymmetry:purple_centered_glazed_terracotta",
+    "glazedresymmetry:purple_glazed_terracotta_pillar",
+
+    "minecraft:magenta_glazed_terracotta",
+    "glazedresymmetry:magenta_centered_glazed_terracotta",
+    "glazedresymmetry:magenta_glazed_terracotta_pillar",
+
+    "minecraft:pink_glazed_terracotta",
+    "glazedresymmetry:pink_centered_glazed_terracotta",
+    "glazedresymmetry:pink_glazed_terracotta_pillar",
+    {
+      "id": "clayworks:glazed_terracotta",
+      "required": false
+    },
+    {
+      "id": "glazedresymmetry:centered_glazed_terracotta",
+      "required": false
+    },
+    {
+      "id": "glazedresymmetry:glazed_terracotta_pillar",
+      "required": false
+    }
+  ]
+}
