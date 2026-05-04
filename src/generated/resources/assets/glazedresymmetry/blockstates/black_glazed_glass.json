@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "glazedresymmetry:block/black_glazed_glass",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "glazedresymmetry:block/black_glazed_glass",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "glazedresymmetry:block/black_glazed_glass"
+    },
+    "facing=west": {
+      "model": "glazedresymmetry:block/black_glazed_glass",
+      "y": 90
+    }
+  }
+}

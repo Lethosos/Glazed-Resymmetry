@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_red": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:red_stained_glass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:glass_sc/red_pillar_to_centered"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_red"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:glass_sc/red_pillar_to_centered"
+    ]
+  }
+}

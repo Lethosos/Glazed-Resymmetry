@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '2.0.76'
+    id 'net.neoforged.moddev' version '2.0.141'
     id 'idea'
 }
 
@@ -18,7 +18,7 @@ version = mod_version
 group = mod_group_id
 
 repositories {
-    mavenLocal()
+    //mavenLocal()
     // Adds the 'libs' folder in the project directory as a flat directory
     flatDir {
         dir 'libs'
@@ -137,9 +137,10 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-    //implementation "com.teamabnormals:blueprint-1.21.1:8.0.8"
-    //implementation "com.teamabnormals:clayworks-1.21.1:4.0.2"
-    implementation "cy.jdkdigital:productivebees-1.21.1:13.9.0"
+    implementation "com.teamabnormals:blueprint-1.21.1:8.0.8"
+    implementation "com.teamabnormals:gallery-1.21.1:2.0.0"
+    implementation "com.teamabnormals:clayworks-1.21.1:4.0.2"
+    implementation "cy.jdkdigital:productivebees-1.21.1:13.13.5"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

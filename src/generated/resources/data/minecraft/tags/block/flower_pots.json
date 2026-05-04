@@ -1,0 +1,24 @@
+{
+  "values": [
+    "glazedresymmetry:white_glazed_flower_pot",
+    "glazedresymmetry:light_gray_glazed_flower_pot",
+    "glazedresymmetry:gray_glazed_flower_pot",
+    "glazedresymmetry:black_glazed_flower_pot",
+    "glazedresymmetry:brown_glazed_flower_pot",
+    "glazedresymmetry:red_glazed_flower_pot",
+    "glazedresymmetry:orange_glazed_flower_pot",
+    "glazedresymmetry:yellow_glazed_flower_pot",
+    "glazedresymmetry:lime_glazed_flower_pot",
+    "glazedresymmetry:green_glazed_flower_pot",
+    "glazedresymmetry:cyan_glazed_flower_pot",
+    "glazedresymmetry:light_blue_glazed_flower_pot",
+    "glazedresymmetry:blue_glazed_flower_pot",
+    "glazedresymmetry:purple_glazed_flower_pot",
+    "glazedresymmetry:magenta_glazed_flower_pot",
+    "glazedresymmetry:pink_glazed_flower_pot",
+    {
+      "id": "glazedresymmetry:glazed_flower_pot",
+      "required": false
+    }
+  ]
+}

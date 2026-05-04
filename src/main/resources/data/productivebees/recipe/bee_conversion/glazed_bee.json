@@ -1,0 +1,18 @@
+{
+    "type": "productivebees:bee_conversion",
+    "source": "productivebees:quarry",
+    "result": "productivebees:glazed",
+    "item": {
+        "item": "minecraft:decorated_pot"
+    },
+    "neoforge:conditions": [
+        {
+            "type": "productivebees:bee_exists",
+            "bee": "productivebees:quarry"
+        },
+        {
+            "type": "productivebees:bee_exists",
+            "bee": "productivebees:glazed"
+        }
+    ]
+}

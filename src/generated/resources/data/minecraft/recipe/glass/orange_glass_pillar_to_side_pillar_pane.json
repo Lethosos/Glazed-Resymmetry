@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "glazedresymmetry:orange_glazed_glass_pillar"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BBB"
+  ],
+  "result": {
+    "count": 16,
+    "id": "glazedresymmetry:orange_glazed_glass_pane_side_pillar"
+  }
+}

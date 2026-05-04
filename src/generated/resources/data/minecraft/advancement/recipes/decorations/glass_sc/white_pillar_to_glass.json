@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:glass_sc/white_pillar_to_glass"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_white": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:white_stained_glass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_white"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:glass_sc/white_pillar_to_glass"
+    ]
+  }
+}

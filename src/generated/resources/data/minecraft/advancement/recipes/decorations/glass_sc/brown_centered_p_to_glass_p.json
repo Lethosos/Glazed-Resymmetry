@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_brown": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:brown_stained_glass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:glass_sc/brown_centered_p_to_glass_p"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_brown"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:glass_sc/brown_centered_p_to_glass_p"
+    ]
+  }
+}

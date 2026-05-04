@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glazed_terracotta",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "pattern": "glazedresymmetry:block/light_blue_glazed_glass"
+  }
+}
