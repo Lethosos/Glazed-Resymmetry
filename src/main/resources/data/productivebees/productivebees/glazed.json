@@ -5,9 +5,6 @@
   "flowerTag": "productivebees:flowers/glazed",
   "beeTexture": "glazedresymmetry:textures/entity/bee/glazed/bee",
   "renderer": "thicc",
-  "attributes": {
-    "weather_tolerance": "2"
-    },
   "conditions": [
     {
       "modid": "productivebees",

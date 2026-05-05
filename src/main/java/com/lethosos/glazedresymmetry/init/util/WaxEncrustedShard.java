@@ -29,13 +29,14 @@ public class WaxEncrustedShard extends Item{
 	@Override
     public void onUseTick(Level level, LivingEntity livingEntity, ItemStack itemstack, int remainingUseDuration) {
         if (remainingUseDuration >= 0 && livingEntity instanceof Player player) {
-            int i = this.getUseDuration(itemstack, livingEntity) - remainingUseDuration + 1;
+            float i = this.getUseDuration(itemstack, livingEntity) - remainingUseDuration + 1;
             
             if (check(i)) {
-            	spawnItemParticles(itemstack, 16, player);
+            	spawnItemParticles(itemstack, 2, player);
             	level.playSound(null, player.getX(), player.getY(), player.getZ(),
             		SoundEvents.AXE_SCRAPE, SoundSource.PLAYERS,
-                	1.0F, 1.0F / (level.getRandom().nextFloat() * 0.4F + 1.2F)// + i * 0.5F
+                	//1.0F, 1.0F / (level.getRandom().nextFloat() * 0.4F + 1.2F) + i * 0.5F
+            		1.0F, 1.0F / (0.4F + 1.2F) + i * 0.5F
             	);
             }
             else {
@@ -55,8 +56,8 @@ public class WaxEncrustedShard extends Item{
         }
     }
     
-    private boolean check(int i) {
-    	if (i < 40) { return true; }
+    private boolean check(float i) {
+    	if (i < 40.0) { return true; }
     	return false;
     }
     
