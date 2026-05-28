@@ -1,9 +1,8 @@
 package com.lethosos.glazedresymmetry;
 
 import org.slf4j.Logger;
-//import com.lethosos.glazedresymmetry.compat.Clayworks;
-//import com.lethosos.glazedresymmetry.compat.PatternedClayworks;
-//import com.lethosos.glazedresymmetry.compat.PatternedGlass;
+
+import com.lethosos.glazedresymmetry.config.GlazedConfig;
 import com.lethosos.glazedresymmetry.init.GlazedBlocks;
 import com.lethosos.glazedresymmetry.init.GlazedCreativeTab;
 import com.lethosos.glazedresymmetry.init.util.GlazedSounds;
@@ -14,9 +13,11 @@ import com.mojang.logging.LogUtils;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
@@ -35,10 +36,12 @@ public class GlazedResymmetry {
     
     //ModContainer needed for config; we don't use one right now
     //public GlazedResymmetry(IEventBus modEventBus, ModContainer modContainer) {
-    public GlazedResymmetry(IEventBus modEventBus) {
+    public GlazedResymmetry(IEventBus modEventBus, ModContainer modContainer) {
         if (ModList.get().isLoaded("clayworks")) { CLAYWORKS = true; }
         
     	modEventBus.addListener(this::commonSetup);
+    	
+    	modContainer.registerConfig(ModConfig.Type.COMMON, GlazedConfig.COMMON_CONFIG);
 
     	//Do we have a @SubscribeEvent somewhere?
         NeoForge.EVENT_BUS.register(this);

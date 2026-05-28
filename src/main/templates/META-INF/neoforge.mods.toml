@@ -44,9 +44,15 @@ logoFile="GR.png" #optional
 authors="Lethosos"
 
 # The description text for the mod (multi line!) (#mandatory)
-description='''Adds blocks to make glazed terracotta tile nicely at odd tile widths. Updated to NeoForge 1.21.1!
+description='''
+Adds blocks to make glazed terracotta tile nicely at odd tile widths. Updated to 1.21.1!
 
-Based on https://imgur.com/gallery/INH2a and https://feedback.minecraft.net/hc/en-us/community/posts/360028840532-Glazed-Terracotta-Pillars-The-Key-to-infinite-Terracotta-Patterns- and https://github.com/Brandcraf06/Blockus'''
+Now includes Patterned Glass by tnoctua
+
+Compat: Clayworks by Team Abnormals, Productive Bees by LobsterJonn
+
+Based on https://imgur.com/gallery/INH2a and https://feedback.minecraft.net/hc/en-us/community/posts/360028840532-Glazed-Terracotta-Pillars-The-Key-to-infinite-Terracotta-Patterns- and https://github.com/Brandcraf06/Blockus
+'''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
 #[[mixins]]
@@ -90,13 +96,19 @@ Based on https://imgur.com/gallery/INH2a and https://feedback.minecraft.net/hc/e
 [[dependencies.${mod_id}]]
     modId="clayworks"
     type="optional"
-    versionRange="4.0.0"
+    versionRange="4.0.3"
     ordering="BEFORE"
     side="BOTH"
 [[dependencies.${mod_id}]]
     modId="blueprint"
     type="optional"
-    versionRange="8.0.2"
+    versionRange="8.0.8"
+    ordering="BEFORE"
+    side="BOTH"
+[[dependencies.${mod_id}]]
+    modId="productivebees"
+    type="optional"
+    versionRange="13.13.5"
     ordering="BEFORE"
     side="BOTH"
 

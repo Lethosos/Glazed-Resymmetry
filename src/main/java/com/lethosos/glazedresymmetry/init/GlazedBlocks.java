@@ -33,8 +33,10 @@ import com.mojang.datafixers.util.Pair;
 public class GlazedBlocks {
 	public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(GlazedResymmetry.MOD_ID);
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(GlazedResymmetry.MOD_ID);
-	public static final DeferredRegister<DecoratedPotPattern> PATTERNS = DeferredRegister.create(Registries.DECORATED_POT_PATTERN, GlazedResymmetry.MOD_ID);
-	public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, GlazedResymmetry.MOD_ID);
+	public static final DeferredRegister<DecoratedPotPattern> PATTERNS = 
+			DeferredRegister.create(Registries.DECORATED_POT_PATTERN, GlazedResymmetry.MOD_ID);
+	public static final DeferredRegister<SoundEvent> SOUNDS = 
+			DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, GlazedResymmetry.MOD_ID);
 
 	public static List<GlazedGroup> groupList = new ArrayList<GlazedGroup>();
 	public static List<Pair<Item, DeferredHolder<DecoratedPotPattern, ?>>> patternList = new ArrayList<Pair<Item, DeferredHolder<DecoratedPotPattern, ?>>>();
@@ -166,7 +168,6 @@ public class GlazedBlocks {
     
     public static void registerPatterns() {
     	groupList.forEach((group) -> {
-    		GlazedResymmetry.LOGGER.info(group.getPatternName(null));
     		DataUtil.registerDecoratedPotPattern(Pair.of(group.SHARD.get(), group.PATTERN));
     	});
     }

@@ -4,5 +4,11 @@
     "result": "productivebees:glazed",
     "item": {
         "item": "minecraft:decorated_pot"
+    },
+  "conditions": [
+    {
+      "modid": "productivebees",
+      "type": "neoforge:mod_loaded"
     }
+  ]
 }

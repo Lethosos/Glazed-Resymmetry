@@ -3,6 +3,8 @@ package com.lethosos.glazedresymmetry.init.util;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.lethosos.glazedresymmetry.config.GlazedConfig;
+
 import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
@@ -18,7 +20,7 @@ import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
-public class WaxEncrustedShard extends Item{
+public class WaxEncrustedShard extends Item {
 	private static final float DEFAULT_USE_SECONDS = 4.0F;
 	protected final RandomSource random = RandomSource.create();
 
@@ -69,7 +71,9 @@ public class WaxEncrustedShard extends Item{
     		ItemStack newShard = temp2.get(min + (int)(Math.random() * ((max - min) + 1))).getDefaultInstance();
 		
     		// I might change dropAround to true for the lulz
-    		player.drop(newShard, false, true);
+    		boolean spread = GlazedConfig.SPRAY_AND_PRAY.get();
+    		if (spread) { player.drop(newShard, true, true); }
+    		else { player.drop(newShard, false, true); }
     		itemstack.shrink(1);
 		
     		player.resetCurrentImpulseContext();

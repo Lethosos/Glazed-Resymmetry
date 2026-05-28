@@ -1,0 +1,7 @@
+// 1.21.1	2026-05-27T23:51:55.3513931	Global Loot Modifiers : glazedresymmetry
+2664a0c7b9ae7db1675c87393b42854c2aa5fec1 data/glazedresymmetry/loot_modifiers/add_loot_ancient_city.json
+b8205bafced84a3c0c6629224446bd4a8844c38c data/glazedresymmetry/loot_modifiers/add_loot_pyramid.json
+fc7166e3eaee3f20333003b748cce316cb4c0234 data/glazedresymmetry/loot_modifiers/add_loot_shipwreck.json
+f2cf2e5aa61b6cd8002e00b7f70cdb0e5d169ae2 data/glazedresymmetry/loot_modifiers/add_loot_underwater_big.json
+a0b6a8f42409bb90b825a0c307e0839b9d49c5c4 data/glazedresymmetry/loot_modifiers/add_loot_underwater_small.json
+7bb1b6cb6f270ccc4e9ce791a067c05dfc2b42cd data/neoforge/loot_modifiers/global_loot_modifiers.json

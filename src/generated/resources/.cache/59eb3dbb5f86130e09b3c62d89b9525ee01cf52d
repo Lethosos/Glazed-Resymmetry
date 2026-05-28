@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-24T23:39:31.0624325	Loot Tables
+// 1.21.1	2026-05-28T00:02:28.766586	Loot Tables
 12865c6444e3acc0a4c039a7929a6171ccbd8469 data/glazedresymmetry/loot_table/blocks/azalea_potmodel.json
 424d591d7bb8662864d0d809e27aa845b2e738a8 data/glazedresymmetry/loot_table/blocks/bamboo_potmodel.json
 029b43ba91ba758162fe978582bb5db48fe1baaf data/glazedresymmetry/loot_table/blocks/black_centered_glazed_glass.json
@@ -312,3 +312,8 @@ a62dc41ace52b9ee69be95b42cd36b9595667026 data/glazedresymmetry/loot_table/blocks
 fa0d9a6ff28d5138ca704f72630b1e85edf22536 data/glazedresymmetry/loot_table/blocks/yellow_glazed_terracotta_pillar_slab.json
 9d53c41fd20f4e23a6987364164d326828d439d9 data/glazedresymmetry/loot_table/blocks/yellow_glazed_terracotta_side_pillar_slab.json
 6aba054f285a1e4b911ccbbb524e7626232cc166 data/glazedresymmetry/loot_table/blocks/yellow_glazed_terracotta_slab.json
+659e9b8ac023f6c2d3b442fb1d2355d73d8d4c8c data/glazedresymmetry/loot_table/chests/ancient_city.json
+102023f9d0c3aeb09a91b4bda904f4aadd8f1bfc data/glazedresymmetry/loot_table/chests/desert_pyramid.json
+e286d046d4651afda60ae32cb0be89a7ff60b656 data/glazedresymmetry/loot_table/chests/shipwreck_supply.json
+08fdc755c9e1ce5971cd548813b66d114868169a data/glazedresymmetry/loot_table/chests/underwater_ruin_big.json
+7b22d98149d860127da64b826961373283b27562 data/glazedresymmetry/loot_table/chests/underwater_ruin_small.json

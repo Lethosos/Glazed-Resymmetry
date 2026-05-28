@@ -1,0 +1,10 @@
+{
+  "entries": [
+    "glazedresymmetry:add_loot_shipwreck",
+    "glazedresymmetry:add_loot_underwater_big",
+    "glazedresymmetry:add_loot_underwater_small",
+    "glazedresymmetry:add_loot_pyramid",
+    "glazedresymmetry:add_loot_ancient_city"
+  ],
+  "replace": false
+}

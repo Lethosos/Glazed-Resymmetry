@@ -19,6 +19,10 @@
     {
       "type": "productivebees:bee_exists",
       "bee": "productivebees:glazed"
+    },
+    {
+      "modid": "productivebees",
+      "type": "neoforge:mod_loaded"
     }
   ]
 }
