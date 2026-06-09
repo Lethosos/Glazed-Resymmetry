@@ -10,6 +10,7 @@ import com.lethosos.glazedresymmetry.compat.ClayworksCompat;
 import com.lethosos.glazedresymmetry.datagen.DataGenerators;
 import com.lethosos.glazedresymmetry.init.util.DataUtil;
 import com.lethosos.glazedresymmetry.init.util.GlasscutterTool;
+import com.lethosos.glazedresymmetry.init.util.GlazedGlassBlock;
 import com.lethosos.glazedresymmetry.init.util.GlazedGlassPane;
 import com.lethosos.glazedresymmetry.init.util.GlazedGlassPillar;
 import com.lethosos.glazedresymmetry.init.util.GlazedGroup;
@@ -39,7 +40,8 @@ public class GlazedBlocks {
 			DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, GlazedResymmetry.MOD_ID);
 
 	public static List<GlazedGroup> groupList = new ArrayList<GlazedGroup>();
-	public static List<Pair<Item, DeferredHolder<DecoratedPotPattern, ?>>> patternList = new ArrayList<Pair<Item, DeferredHolder<DecoratedPotPattern, ?>>>();
+	public static List<Pair<Item, DeferredHolder<DecoratedPotPattern, ?>>> patternList = 
+			new ArrayList<Pair<Item, DeferredHolder<DecoratedPotPattern, ?>>>();
 	public static Map<Block, Block> CUTTER_MAP = new HashMap<Block, Block>();
 	public static List<Block> CUTTER_ROTATABLES = new ArrayList<Block>();
 	
@@ -87,8 +89,10 @@ public class GlazedBlocks {
 			() -> new Block(Blocks.AZALEA.properties()));
 	
 	//Special flower glass
-	public static DeferredBlock<GlazedGlassPillar> FLOWERING_GLASS = GlazedGroup.registerBlock("flowering_glass", 
-			() -> new GlazedGlassPillar(GlazedGlassPillar.GlazedPillarProperties(DyeColor.RED), null, null));
+	public static DeferredBlock<GlazedGlassBlock> FLOWERING_GLASS = GlazedGroup.registerBlock("flowering_glass", 
+			() -> new GlazedGlassBlock(GlazedGlassBlock.GlazedGlassProperties(DyeColor.RED)));
+	public static DeferredBlock<GlazedGlassPillar> FLOWERING_GLASS_PILLAR = GlazedGroup.registerBlock("flowering_glass_pillar", 
+			() -> new GlazedGlassPillar(GlazedGlassPillar.GlazedPillarProperties(DyeColor.RED)));
 	public static DeferredBlock<GlazedGlassPane> FLOWERING_GLASS_TOP_PANE = GlazedGroup.registerBlock("flowering_glass_top_pane", 
 			() -> new GlazedGlassPane(GlazedGlassPane.GlazedPaneProperties(DyeColor.RED)));
 	public static DeferredBlock<GlazedGlassPane> FLOWERING_GLASS_SIDE_PANE = GlazedGroup.registerBlock("flowering_glass_side_pane", 
@@ -127,25 +131,28 @@ public class GlazedBlocks {
     	
     	BLOCKS.register(eventBus);
     	ITEMS.register(eventBus);
+    	DataGenerators.addKeys();
     }
 
-    //Glasscutter list registration
-    public static void setPanes() {
-    	groupList.forEach((group) -> {
-    		if (group.GLASS.GLAZED_PANE.isBound()) {
-    			group.GLASS.setPanes();
-				CUTTER_MAP.putAll(group.GLASS.PANES_MAP);
-    		}
-    	});
-    }
-    public static void setRotatables() {
+    //Sets up anything needed during the Enqueue setup.
+    public static void setEnqueueExtras() {
     	groupList.forEach((group) -> {
     		if (group.GLASS.GLAZED.isBound()) {
+    			//For panes
+    			group.GLASS.setPanes();
+				CUTTER_MAP.putAll(group.GLASS.PANES_MAP);
+				//For glass itself
     			group.GLASS.setRotationList();
 				CUTTER_ROTATABLES.addAll(group.GLASS.ROTATE_LIST);
+				//For patterns
+				DataUtil.registerDecoratedPotPattern(Pair.of(group.SHARD.get(), group.PATTERN));
+				group.GLASS.addKeys();
     		}
     	});
     	CUTTER_ROTATABLES.add(FLOWERING_GLASS.get());
+    	CUTTER_ROTATABLES.add(FLOWERING_GLASS_PILLAR.get());
+    	FLOWERING_GLASS.get().setGlassHolders(FLOWERING_GLASS, FLOWERING_GLASS_PILLAR);
+    	FLOWERING_GLASS_PILLAR.get().setGlassHolders(FLOWERING_GLASS, FLOWERING_GLASS_PILLAR);
     }
     
     //Register Creative Tab stuff collectively here using GlazedGroup.toTab() for each group object
@@ -155,21 +162,14 @@ public class GlazedBlocks {
     		group.toTab();
     	});
     	
-    	if ( GlazedResymmetry.CLAYWORKS == true ) {
-    		ClayworksCompat.GLAZED.toTab();
-    	}
+    	if ( GlazedResymmetry.CLAYWORKS == true ) { ClayworksCompat.GLAZED.toTab();	}
     	
     	GlazedCreativeTab.TabList.add(FLOWERING_GLASS.asItem());
+    	GlazedCreativeTab.TabList.add(FLOWERING_GLASS_PILLAR.asItem());
     	GlazedCreativeTab.TabList.add(FLOWERING_GLASS_TOP_PANE.asItem());
     	GlazedCreativeTab.TabList.add(FLOWERING_GLASS_SIDE_PANE.asItem());
     	GlazedCreativeTab.TabList.add(WAXED_SHARD.get());
     	GlazedCreativeTab.TabList.add(GLASSCUTTER_TOOL.get());
-    }
-    
-    public static void registerPatterns() {
-    	groupList.forEach((group) -> {
-    		DataUtil.registerDecoratedPotPattern(Pair.of(group.SHARD.get(), group.PATTERN));
-    	});
     }
     
     public static void populateList() {

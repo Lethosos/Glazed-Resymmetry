@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-28T00:02:28.766586	Loot Tables
+// 1.21.1	2026-05-31T23:55:22.7596032	Loot Tables
 12865c6444e3acc0a4c039a7929a6171ccbd8469 data/glazedresymmetry/loot_table/blocks/azalea_potmodel.json
 424d591d7bb8662864d0d809e27aa845b2e738a8 data/glazedresymmetry/loot_table/blocks/bamboo_potmodel.json
 029b43ba91ba758162fe978582bb5db48fe1baaf data/glazedresymmetry/loot_table/blocks/black_centered_glazed_glass.json
@@ -80,6 +80,7 @@ f9d97ec69c384f32f7ed3d381406d14846cf2d6c data/glazedresymmetry/loot_table/blocks
 da8eefb7b86356f904b5696be3afe812ecf1be50 data/glazedresymmetry/loot_table/blocks/cyan_glazed_terracotta_slab.json
 aec971bfa388d11a6d028408907c2015798b15a1 data/glazedresymmetry/loot_table/blocks/flowering_azalea_potmodel.json
 0909b46b4ebce9be40e9ec879109b66484791b43 data/glazedresymmetry/loot_table/blocks/flowering_glass.json
+48bc022bdd47a36dbcd52c5b6f231d2d985f5344 data/glazedresymmetry/loot_table/blocks/flowering_glass_pillar.json
 6a63de79c2b844fed1ec6adacc0b9387109fca31 data/glazedresymmetry/loot_table/blocks/flowering_glass_side_pane.json
 54a9e42c060c621fe2aaa297da461d1bd97a2d4c data/glazedresymmetry/loot_table/blocks/flowering_glass_top_pane.json
 a48927123449c7de6cfd48b80795d08d6972aeb3 data/glazedresymmetry/loot_table/blocks/glazed_flower_pot.json

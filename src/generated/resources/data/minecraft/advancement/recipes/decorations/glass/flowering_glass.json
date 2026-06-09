@@ -1,16 +1,6 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_flowering": {
-      "conditions": {
-        "items": [
-          {
-            "items": "glazedresymmetry:flowering_glass"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "minecraft:glass/flowering_glass"
@@ -31,7 +21,6 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_flowering",
       "has_white_tulip"
     ]
   ],

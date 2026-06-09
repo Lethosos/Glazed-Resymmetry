@@ -1,8 +1,7 @@
 {
-  "parent": "minecraft:block/cube_column",
+  "parent": "minecraft:block/template_glazed_terracotta",
   "render_type": "minecraft:translucent",
   "textures": {
-    "end": "glazedresymmetry:block/flower_patterned_glass_top",
-    "side": "glazedresymmetry:block/flower_patterned_glass_side"
+    "pattern": "glazedresymmetry:block/flower_patterned_glass_top"
   }
 }

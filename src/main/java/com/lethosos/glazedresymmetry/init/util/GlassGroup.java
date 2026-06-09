@@ -1,14 +1,15 @@
 package com.lethosos.glazedresymmetry.init.util;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.function.Supplier;
 
 import com.lethosos.glazedresymmetry.GlazedResymmetry;
 import com.lethosos.glazedresymmetry.init.GlazedBlocks;
 import com.lethosos.glazedresymmetry.init.GlazedCreativeTab;
 
+import net.minecraft.core.Holder;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
@@ -16,7 +17,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.StainedGlassBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.PushReaction;
@@ -29,8 +29,8 @@ public class GlassGroup {
 	public static String groupName;
 	public DyeColor color;
 	
-	public DeferredBlock<StainedGlassBlock> GLAZED;
-	public DeferredBlock<StainedGlassBlock> CENTERED;
+	public DeferredBlock<GlazedGlassBlock> GLAZED;
+	public DeferredBlock<GlazedGlassBlock> CENTERED;
 	public DeferredBlock<GlazedGlassPillar> PILLAR;
 	
 	public DeferredBlock<GlazedGlassPane> GLAZED_PANE;
@@ -49,8 +49,7 @@ public class GlassGroup {
 	
 	public TagKey<Item> GLASS_KEY;
 	public TagKey<Item> PANES_KEY;
-	
-	protected static List<Block> OCCL_LIST = new ArrayList<Block>();
+	public Set<Holder<Block>> BLOCK_KEY;
 	
 	public Map<Block, Block> PANES_MAP;
 	public List<Block> ROTATE_LIST;
@@ -84,9 +83,9 @@ public class GlassGroup {
 	}
 	
 	private void build2() {
-		GLAZED = registerBlock(groupName + "_glazed_glass", ()-> new GlazedGlassBlock(GlazedGlassBlock.GlazedGlassProperties(color), CENTERED, PILLAR));
-		CENTERED = registerBlock(groupName + "_centered_glazed_glass", ()-> new GlazedGlassBlock(GlazedGlassBlock.GlazedGlassProperties(color), GLAZED, PILLAR));
-		PILLAR = registerBlock(groupName + "_glazed_glass_pillar", ()-> new GlazedGlassPillar(GlazedGlassPillar.GlazedPillarProperties(color), GLAZED, CENTERED));
+		GLAZED = registerBlock(groupName + "_glazed_glass", ()-> new GlazedGlassBlock(GlazedGlassBlock.GlazedGlassProperties(color)));
+		CENTERED = registerBlock(groupName + "_centered_glazed_glass", ()-> new GlazedGlassBlock(GlazedGlassBlock.GlazedGlassProperties(color)));
+		PILLAR = registerBlock(groupName + "_glazed_glass_pillar", ()-> new GlazedGlassPillar(GlazedGlassPillar.GlazedPillarProperties(color)));
 		
 		GLAZED_PANE = registerBlock(groupName + "_glazed_glass_pane", ()-> new GlazedGlassPane(GlazedGlassPane.GlazedPaneProperties(color)));
 		CENTERED_PANE = registerBlock(groupName + "_centered_glazed_glass_pane", ()-> new GlazedGlassPane(GlazedGlassPane.GlazedPaneProperties(color)));
@@ -99,9 +98,16 @@ public class GlassGroup {
 		side1 = registerBlock(groupName + "_glazed_glass_pane_side_pillar1", ()-> new GlazedGlassPane(GlazedGlassPane.GlazedPaneProperties(color)));
 	}
 	
-	public void addTags(TagKey<Item> glassKey, TagKey<Item> paneKey) {
+	public void addTags(TagKey<Item> glassKey, TagKey<Item> panesKey) {
 		GLASS_KEY = glassKey;
-		PANES_KEY = paneKey;
+		PANES_KEY = panesKey;
+	}
+	
+	public void addKeys() {
+		BLOCK_KEY = Set.of(GLAZED, CENTERED, PILLAR);
+		GLAZED.get().setKey(BLOCK_KEY);
+		CENTERED.get().setKey(BLOCK_KEY);
+		PILLAR.get().setKey(BLOCK_KEY);
 	}
 	
 	public void setPanes() {
@@ -116,6 +122,14 @@ public class GlassGroup {
 	
 	public void setRotationList() {
 		ROTATE_LIST = List.of(GLAZED.get(), PILLAR.get());
+	}
+	
+	public void setKeys() {
+		((GlazedGlassBlock) GLAZED.get()).setKey(BLOCK_KEY);
+	}
+	public void setTransparancy() {
+		((GlazedGlassBlock) GLAZED.get()).setGlassHolders(CENTERED, PILLAR);
+		((GlazedGlassBlock) CENTERED.get()).setGlassHolders(GLAZED, PILLAR);
 	}
 	
 	public static Properties GlassProperties() {

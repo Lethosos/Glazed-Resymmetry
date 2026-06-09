@@ -6,6 +6,7 @@ import com.lethosos.glazedresymmetry.config.GlazedConfig;
 import com.lethosos.glazedresymmetry.init.GlazedBlocks;
 import com.lethosos.glazedresymmetry.init.GlazedCreativeTab;
 import com.lethosos.glazedresymmetry.init.util.GlazedSounds;
+import com.lethosos.glazedresymmetry.init.util.GlazedTags;
 import com.lethosos.glazedresymmetry.init.util.ModBlockEntities;
 import com.lethosos.glazedresymmetry.init.util.renderer.GlazedFlowerPotRenderer;
 import com.mojang.logging.LogUtils;
@@ -47,6 +48,7 @@ public class GlazedResymmetry {
         NeoForge.EVENT_BUS.register(this);
         
         GlazedBlocks.register(modEventBus);
+        GlazedTags.Items.compat();
         ModBlockEntities.register(modEventBus);
         GlazedBlocks.PATTERNS.register(modEventBus);
         GlazedSounds.SOUND_EVENTS.register(modEventBus);
@@ -63,9 +65,7 @@ public class GlazedResymmetry {
 	private void commonSetup(final FMLCommonSetupEvent event) {
     	event.enqueueWork(() -> {
     		GlazedBlocks.setupTab();
-    		GlazedBlocks.registerPatterns();
-    		GlazedBlocks.setPanes();
-    		GlazedBlocks.setRotatables();
+    		GlazedBlocks.setEnqueueExtras();
     		});
     }
 	

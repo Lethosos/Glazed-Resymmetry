@@ -1,5 +1,7 @@
 package com.lethosos.glazedresymmetry.init.util;
 
+import java.util.Set;
+
 import javax.annotation.Nullable;
 
 import net.minecraft.core.Direction;
@@ -25,14 +27,17 @@ import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.PushReaction;
 
 public class GlazedGlassPillar extends RotatedPillarBlock implements BeaconBeamBlock{
-	private Holder<Block> glass;
-	private Holder<Block> center;
+	private Set<Holder<Block>> key;
 	
 	public GlazedGlassPillar(Properties properties, @Nullable Holder<Block> g, @Nullable Holder<Block> c) {
 		super(properties);
-		glass = g;
-		center = c;
+		key = Set.of(g, c);
 	}
+	public GlazedGlassPillar(Properties properties) { super(properties); }
+	
+	public void setKey(Set<Holder<Block>> k) { key = k;	}
+	
+	public void setGlassHolders(@Nullable Holder<Block> g, @Nullable Holder<Block> c) { key = Set.of(g, c);	}
 
 	public static final StreamCodec<RegistryFriendlyByteBuf, HolderSet<Block>> HOLDER_SET_STREAM_CODEC =
 		    ByteBufCodecs.holderSet(Registries.BLOCK);
@@ -80,13 +85,6 @@ public class GlazedGlassPillar extends RotatedPillarBlock implements BeaconBeamB
    
    @Override
    protected boolean skipRendering(BlockState state, BlockState adjacentBlockState, Direction side) {
-	   if (glass != null) {
-		   if (adjacentBlockState.is(glass)) { return adjacentBlockState.is(glass) ? true : super.skipRendering(state, adjacentBlockState, side); }
-		   else if (adjacentBlockState.is(center)) { return adjacentBlockState.is(center) ? true : super.skipRendering(state, adjacentBlockState, side); }
-		   else { return adjacentBlockState.is(this) ? true : super.skipRendering(state, adjacentBlockState, side); }
-	   }
-		else {
-		   return adjacentBlockState.is(this) ? true : super.skipRendering(state, adjacentBlockState, side);
-	   }
+    	return key.contains(adjacentBlockState.getBlockHolder()) ? true : super.skipRendering(state, adjacentBlockState, side);
    }
 }

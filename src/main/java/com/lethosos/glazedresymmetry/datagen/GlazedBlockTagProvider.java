@@ -11,7 +11,6 @@ import org.jetbrains.annotations.Nullable;
 import com.lethosos.glazedresymmetry.GlazedResymmetry;
 import com.lethosos.glazedresymmetry.init.GlazedBlocks;
 import com.lethosos.glazedresymmetry.init.util.GlazedGroup;
-
 import java.util.concurrent.CompletableFuture;
 
 public class GlazedBlockTagProvider extends BlockTagsProvider {
@@ -47,6 +46,7 @@ public class GlazedBlockTagProvider extends BlockTagsProvider {
     	
     	tag(BlockTags.MINEABLE_WITH_PICKAXE)
     		.add(GlazedBlocks.FLOWERING_GLASS.get())
+    		.add(GlazedBlocks.FLOWERING_GLASS_PILLAR.get())
     		.add(GlazedBlocks.FLOWERING_GLASS_SIDE_PANE.get())
     		.add(GlazedBlocks.FLOWERING_GLASS_TOP_PANE.get());
     }

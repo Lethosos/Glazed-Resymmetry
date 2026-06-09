@@ -60,6 +60,7 @@ public class GlazedBlockLootTableProvider extends BlockLootSubProvider{
 		});
 		
 		dropWhenSilkTouch(GlazedBlocks.FLOWERING_GLASS.get());
+		dropWhenSilkTouch(GlazedBlocks.FLOWERING_GLASS_PILLAR.get());
 		dropWhenSilkTouch(GlazedBlocks.FLOWERING_GLASS_SIDE_PANE.get());
 		dropWhenSilkTouch(GlazedBlocks.FLOWERING_GLASS_TOP_PANE.get());
 		

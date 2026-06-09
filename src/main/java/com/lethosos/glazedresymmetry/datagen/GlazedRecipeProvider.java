@@ -2,7 +2,7 @@ package com.lethosos.glazedresymmetry.datagen;
 
 import java.util.concurrent.CompletableFuture;
 
-import com.lethosos.glazedresymmetry.GlazedResymmetry;
+import com.lethosos.glazedresymmetry.compat.ClayworksCompat;
 import com.lethosos.glazedresymmetry.init.GlazedBlocks;
 import com.lethosos.glazedresymmetry.init.util.GlazedGroup;
 import com.lethosos.glazedresymmetry.init.util.VanillaCheck;
@@ -15,7 +15,6 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
@@ -90,7 +89,7 @@ public class GlazedRecipeProvider extends RecipeProvider implements IConditionBu
 				ShapedRecipeBuilder.shaped(DECOR, VanillaCheck.returnGlazed(group.groupName))
 				.pattern("S")
 				.pattern("S")
-				.define('S', group.SLAB_KEY)
+				.define('S', ClayworksCompat.GLAZED.SLAB_KEY)
 				.unlockedBy("has_" + group.groupName, has(VanillaCheck.returnGlazed(group.groupName)))
 				.save(recipeOutput.withConditions(condBuilder), "cb/" + group.groupName + "_slab_to_block");
 
@@ -283,9 +282,15 @@ public class GlazedRecipeProvider extends RecipeProvider implements IConditionBu
 		ShapelessRecipeBuilder.shapeless(DECOR, GlazedBlocks.FLOWERING_GLASS.asItem())
 		.requires(Blocks.RED_STAINED_GLASS)
 		.requires(Items.WHITE_TULIP)
-		.unlockedBy("has_flowering", has(GlazedBlocks.FLOWERING_GLASS))
 		.unlockedBy("has_white_tulip", has(Items.WHITE_TULIP))
 		.save(recipeOutput, "glass/flowering_glass");
+		
+		SingleItemRecipeBuilder.stonecutting(Ingredient.of(GlazedBlocks.FLOWERING_GLASS.asItem()), DECOR, GlazedBlocks.FLOWERING_GLASS_PILLAR.asItem())
+		.unlockedBy("has_flowering", has(GlazedBlocks.FLOWERING_GLASS))
+		.save(recipeOutput, "glass_sc/flowering_glass_to_pillar");
+		SingleItemRecipeBuilder.stonecutting(Ingredient.of(GlazedBlocks.FLOWERING_GLASS_PILLAR.asItem()), DECOR, GlazedBlocks.FLOWERING_GLASS.asItem())
+		.unlockedBy("has_flowering", has(GlazedBlocks.FLOWERING_GLASS))
+		.save(recipeOutput, "glass_sc/flowering_pillar_to_glass");
 		
 		ShapedRecipeBuilder.shaped(DECOR, GlazedBlocks.FLOWERING_GLASS_SIDE_PANE.get(), 16)
 		.pattern("BBB")
@@ -558,9 +563,5 @@ public class GlazedRecipeProvider extends RecipeProvider implements IConditionBu
 		SingleItemRecipeBuilder.stonecutting(Ingredient.of(group.GLASS.SIDE_PILLAR_PANE), DECOR, group.GLASS.PILLAR_TOP_PANE)
 		.unlockedBy("has_" + group.groupName, has(VanillaCheck.returnGlass(group.groupName)))
 		.save(recipeOutput, "glass_sc/" + group.groupName + "_side_pillar_p_to_pillar_top_p");
-	}
-	
-	public static ResourceLocation resourceLoc(String path) {
-		return ResourceLocation.fromNamespaceAndPath(GlazedResymmetry.MOD_ID, path);
 	}
 }

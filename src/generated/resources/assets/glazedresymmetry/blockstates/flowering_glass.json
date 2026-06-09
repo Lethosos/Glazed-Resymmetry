@@ -1,16 +1,19 @@
 {
   "variants": {
-    "axis=x": {
-      "model": "glazedresymmetry:block/flowering_glass_horizontal",
-      "x": 90,
-      "y": 90
+    "facing=east": {
+      "model": "glazedresymmetry:block/flowering_glass",
+      "y": 270
     },
-    "axis=y": {
+    "facing=north": {
+      "model": "glazedresymmetry:block/flowering_glass",
+      "y": 180
+    },
+    "facing=south": {
       "model": "glazedresymmetry:block/flowering_glass"
     },
-    "axis=z": {
-      "model": "glazedresymmetry:block/flowering_glass_horizontal",
-      "x": 90
+    "facing=west": {
+      "model": "glazedresymmetry:block/flowering_glass",
+      "y": 90
     }
   }
 }

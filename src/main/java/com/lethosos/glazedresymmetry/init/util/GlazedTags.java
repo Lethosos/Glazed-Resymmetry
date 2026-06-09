@@ -12,6 +12,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 
 public class GlazedTags {
 	
@@ -105,6 +106,7 @@ public class GlazedTags {
 		public static TagKey<Item> GLAZED_BLOCKS;
 		public static TagKey<Item> GLAZED_GLASS;
 		public static TagKey<Item> GLAZED_PANES;
+		public static TagKey<Block> GLAZED_GLASS_BLOCKS;
 	    public static void compat() {
 	    	if (GlazedResymmetry.CLAYWORKS == true) {
 	    		GLAZED_SLABS = createItemTag("glazed_slabs");
@@ -118,7 +120,7 @@ public class GlazedTags {
     public static TagKey<Item> createItemTag(String name) {
         return GlazedBlocks.ITEMS.createTagKey(ResourceLocation.fromNamespaceAndPath(GlazedResymmetry.MOD_ID, name));
     }
-    
+
     public class GlazedTagsShardCache {
         private static Set<Holder<Item>> itemsInTag = null;
 

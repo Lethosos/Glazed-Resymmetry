@@ -1,5 +1,7 @@
 package com.lethosos.glazedresymmetry.init.util;
 
+import java.util.Set;
+
 import javax.annotation.Nullable;
 
 import net.minecraft.core.Direction;
@@ -20,14 +22,17 @@ import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.PushReaction;
 
 public class GlazedGlassBlock extends StainedGlassBlock implements BeaconBeamBlock {
-	private Holder<Block> glass1;
-	private Holder<Block> glass2;
+	private Set<Holder<Block>> key;
 	
-	public GlazedGlassBlock(Properties properties, @Nullable Holder<Block> g1, @Nullable Holder<Block> g2) {
+	public GlazedGlassBlock(Properties properties, @Nullable Holder<Block> cg, @Nullable Holder<Block> p) {
 		super(color, properties);
-		glass1 = g1;
-		glass2 = g2;
+		key = Set.of(cg, p);
 	}
+	public GlazedGlassBlock(Properties properties) { super(color, properties); }
+	
+	public void setKey(Set<Holder<Block>> k) { key = k; }
+	
+	public void setGlassHolders(@Nullable Holder<Block> cg, @Nullable Holder<Block> p) { key = Set.of(cg, p); }
 	
 	private static DyeColor color;
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
@@ -69,13 +74,6 @@ public class GlazedGlassBlock extends StainedGlassBlock implements BeaconBeamBlo
     
     @Override
     protected boolean skipRendering(BlockState state, BlockState adjacentBlockState, Direction side) {
- 	   if (glass1 != null) {
- 		   if (adjacentBlockState.is(glass1)) { return adjacentBlockState.is(glass1) ? true : super.skipRendering(state, adjacentBlockState, side); }
- 		   else if (adjacentBlockState.is(glass2)) { return adjacentBlockState.is(glass2) ? true : super.skipRendering(state, adjacentBlockState, side); }
- 		   else { return adjacentBlockState.is(this) ? true : super.skipRendering(state, adjacentBlockState, side); }
- 	   }
- 		else {
- 		   return adjacentBlockState.is(this) ? true : super.skipRendering(state, adjacentBlockState, side);
- 	   }
+     	return key.contains(adjacentBlockState.getBlockHolder()) ? true : super.skipRendering(state, adjacentBlockState, side);
     }
 }
