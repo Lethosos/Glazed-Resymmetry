@@ -1,20 +1,21 @@
 package com.lethosos.glazedresymmetry.init.util;
 
-import com.lethosos.glazedresymmetry.GlazedResymmetry;
-import com.lethosos.glazedresymmetry.init.GlazedBlocks;
+import java.util.ArrayList;
+import java.util.List;
 
+import com.lethosos.glazedresymmetry.GlazedResymmetry;
 import cy.jdkdigital.productivebees.common.entity.bee.ConfigurableBee;
 import cy.jdkdigital.productivebees.init.ModEntities;
 import cy.jdkdigital.productivebees.util.GeneAttribute;
 import net.minecraft.world.entity.Entity.RemovalReason;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Items;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.NoteBlock;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -28,22 +29,19 @@ public class GlazedEvents {
 	public static void onNoteBlockPlay(NoteBlockEvent.Play event) {
 		BlockPos eventPos = event.getPos().below();
 		Block testBlock = event.getLevel().getBlockState(eventPos).getBlock();
-		Player playerHere = event.getLevel().players().getFirst();
-		
-		GlazedBlocks.groupList.forEach((group) -> {
-			if (testBlock.equals(VanillaCheck.returnGlazed(group.groupName)) 
-					|| testBlock.equals(group.SLAB.get())
-					|| testBlock.equals(group.CENTERED.get())
-					|| testBlock.equals(group.CENTERED_SLAB.get())
-					|| testBlock.equals(group.PILLAR.get())
-					|| testBlock.equals(group.PILLAR_SLAB.get())
-					|| testBlock.equals(group.SIDE_PILLAR_SLAB.get())) {
-				event.getLevel().playSound(playerHere, eventPos, GlazedSounds.NOTE_BLOCK_OUD.get(), SoundSource.RECORDS);
+		List<Block> notelist = new ArrayList<Block>();
+		GlazedTags.GlazedNoteblockCache.getBlockTagContents().forEach((block) -> { notelist.add(block.value()); });
+		if (notelist.isEmpty()) { GlazedResymmetry.LOGGER.info("Is Empty!"); }
+
+		notelist.forEach((block) -> {
+			if (testBlock.equals(block)) {
+				event.getLevel().playSound(event.getLevel().getNearestPlayer(event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), 16, true), 
+						eventPos, GlazedSounds.NOTE_BLOCK_OUD.get(), SoundSource.BLOCKS, 
+						3.0f, NoteBlock.getPitchFromNote(event.getVanillaNoteId()));
+				//Note: May need to change getVanillaNoteId() for later versions, even if it just *works*.
 			}
 		});
 	}
-	
-	//GlazedResymmetry.LOGGER.info("Glazed Bee: This is not a pinata!");
 	
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingDamageEvent.Post event) {
@@ -54,15 +52,6 @@ public class GlazedEvents {
 						bee.getBeeType().toString().equals("productivebees:glazed")) {
 					Level level = event.getEntity().level();
 					
-					//bee.convertTo(ModEntities.QUARRY_BEE.get(), true);
-					//bee.playSound(SoundEvents.DECORATED_POT_SHATTER);
-					//GlazedResymmetry.LOGGER.info(attacker.toString());
-					
-					//bee.attackTarget(attacker);
-					//bee.setTarget(attacker);
-					//bee.getTarget();
-					//bee.updatePersistentAnger((ServerLevel) level, true);
-					
 					ConfigurableBee newBee = new ConfigurableBee(ModEntities.QUARRY_BEE.get(), event.getEntity().level());
 					newBee.setAttributeValue(GeneAttribute.ENDURANCE, bee.getAttributeValue(GeneAttribute.ENDURANCE));
 					newBee.setAttributeValue(GeneAttribute.PRODUCTIVITY, bee.getAttributeValue(GeneAttribute.PRODUCTIVITY));
@@ -71,13 +60,8 @@ public class GlazedEvents {
 					newBee.playSound(SoundEvents.DECORATED_POT_SHATTER);
 					newBee.setPos(bee.getBlockX(), bee.getBlockY(), bee.getBlockZ());
 					newBee.setDeltaMovement(bee.getDeltaMovement());
-					//newBee.setPersistenceRequired();
 					bee.remove(RemovalReason.UNLOADED_TO_CHUNK);
 					level.addFreshEntity(newBee);
-					
-					//newBee.finalizeSpawn(level.getServer().getLevel(Level.OVERWORLD), level.getCurrentDifficultyAt(newBee.getOnPos()), MobSpawnType.SPAWN_EGG, null);
-					//newBee.setHasStung(false);
-					//newBee.setInvulnerable(true);
 				}
 			}
 		}

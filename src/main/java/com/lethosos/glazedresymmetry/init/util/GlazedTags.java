@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.Block;
 
 public class GlazedTags {
 	
+    public static final TagKey<Block> GLAZED_NOTEBLOCK = createBlockTag("glazed_noteblock");
     public static final TagKey<Item> POTTABLE_PLANTS = createItemTag("pottable_plants");
 	
     public static class Items {
@@ -120,6 +121,10 @@ public class GlazedTags {
     public static TagKey<Item> createItemTag(String name) {
         return GlazedBlocks.ITEMS.createTagKey(ResourceLocation.fromNamespaceAndPath(GlazedResymmetry.MOD_ID, name));
     }
+    
+    public static TagKey<Block> createBlockTag(String name) {
+        return GlazedBlocks.BLOCKS.createTagKey(ResourceLocation.fromNamespaceAndPath(GlazedResymmetry.MOD_ID, name));
+    }
 
     public class GlazedTagsShardCache {
         private static Set<Holder<Item>> itemsInTag = null;
@@ -134,6 +139,22 @@ public class GlazedTags {
         
         public static void invalidateCache() {
             itemsInTag = null;
+        }
+    }
+    
+    public class GlazedNoteblockCache {
+        private static Set<Holder<Block>> blocksInTag = null;
+
+        public static Set<Holder<Block>> getBlockTagContents() {
+            if (blocksInTag == null) {
+                // Wrap as an unmodifiable set, as we're not supposed to modify this anyway
+                 blocksInTag = Collections.unmodifiableSet(BuiltInRegistries.BLOCK.getOrCreateTag(GlazedTags.GLAZED_NOTEBLOCK).stream().collect(Collectors.toSet()));
+            }
+            return blocksInTag;
+        }
+        
+        public static void invalidateCache() {
+            blocksInTag = null;
         }
     }
 }

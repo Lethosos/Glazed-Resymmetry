@@ -70,7 +70,7 @@ public class WaxEncrustedShard extends Item {
     		int min = 0, max = temp2.size() - 1;
     		ItemStack newShard = temp2.get(min + (int)(Math.random() * ((max - min) + 1))).getDefaultInstance();
 		
-    		// I might change dropAround to true for the lulz
+    		// There's a comfig to turn this to true. For the lulz.
     		boolean spread = GlazedConfig.SPRAY_AND_PRAY.get();
     		if (spread) { player.drop(newShard, true, true); }
     		else { player.drop(newShard, false, true); }

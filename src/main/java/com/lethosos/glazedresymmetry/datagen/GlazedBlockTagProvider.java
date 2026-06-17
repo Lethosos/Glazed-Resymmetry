@@ -11,6 +11,9 @@ import org.jetbrains.annotations.Nullable;
 import com.lethosos.glazedresymmetry.GlazedResymmetry;
 import com.lethosos.glazedresymmetry.init.GlazedBlocks;
 import com.lethosos.glazedresymmetry.init.util.GlazedGroup;
+import com.lethosos.glazedresymmetry.init.util.GlazedTags;
+import com.lethosos.glazedresymmetry.init.util.VanillaCheck;
+
 import java.util.concurrent.CompletableFuture;
 
 public class GlazedBlockTagProvider extends BlockTagsProvider {
@@ -75,5 +78,14 @@ public class GlazedBlockTagProvider extends BlockTagsProvider {
 			.add(group.GLASS.SIDE_PILLAR_PANE.get());
 			
 		tag(BlockTags.FLOWER_POTS).add(group.FLOWER_POT.get());
+		
+		tag(GlazedTags.GLAZED_NOTEBLOCK)
+			.add(VanillaCheck.returnGlazed(group.groupName))
+			.add(group.SLAB.get())
+			.add(group.CENTERED.get())
+			.add(group.CENTERED_SLAB.get())
+			.add(group.PILLAR.get())
+			.add(group.PILLAR_SLAB.get())
+			.add(group.SIDE_PILLAR_SLAB.get());
 	}
 }

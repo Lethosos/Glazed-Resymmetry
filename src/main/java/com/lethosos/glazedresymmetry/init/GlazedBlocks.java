@@ -10,10 +10,12 @@ import com.lethosos.glazedresymmetry.compat.ClayworksCompat;
 import com.lethosos.glazedresymmetry.datagen.DataGenerators;
 import com.lethosos.glazedresymmetry.init.util.DataUtil;
 import com.lethosos.glazedresymmetry.init.util.GlasscutterTool;
+import com.lethosos.glazedresymmetry.init.util.GlazedEvents;
 import com.lethosos.glazedresymmetry.init.util.GlazedGlassBlock;
 import com.lethosos.glazedresymmetry.init.util.GlazedGlassPane;
 import com.lethosos.glazedresymmetry.init.util.GlazedGlassPillar;
 import com.lethosos.glazedresymmetry.init.util.GlazedGroup;
+import com.lethosos.glazedresymmetry.init.util.GlazedTags;
 import com.lethosos.glazedresymmetry.init.util.WaxEncrustedShard;
 
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -44,6 +46,7 @@ public class GlazedBlocks {
 			new ArrayList<Pair<Item, DeferredHolder<DecoratedPotPattern, ?>>>();
 	public static Map<Block, Block> CUTTER_MAP = new HashMap<Block, Block>();
 	public static List<Block> CUTTER_ROTATABLES = new ArrayList<Block>();
+	public static List<Block> GLAZED_NOTEBLOCK_LIST = new ArrayList<Block>();
 	
 	//WHITE
 	public static GlazedGroup WHITE = new GlazedGroup("white", DyeColor.WHITE);
@@ -132,6 +135,7 @@ public class GlazedBlocks {
     	BLOCKS.register(eventBus);
     	ITEMS.register(eventBus);
     	DataGenerators.addKeys();
+    	//GlazedTags.GlazedNoteblockCache.getBlockTagContents().forEach((block) -> { GLAZED_NOTEBLOCK_LIST.add(block.value()); });
     }
 
     //Sets up anything needed during the Enqueue setup.
